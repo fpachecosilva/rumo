@@ -1,0 +1,260 @@
+/* 
+		Hello, guys!! :)
+		CSS desenvolvido pela bs.agency em 2020. 
+		Façam bom uso :)
+
+*/
+
+/* clean CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html {    
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: none;
+    color: var(--principal);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.625rem;
+    height: 100%;
+    min-height: 100% !important;
+
+    p {
+        color: red;
+    }
+}
+
+/* Variaveis: */
+:root {
+    --principal: #003865;
+    --secundaria: #32A6E6;
+
+    --margin: 30px;
+    --tempo: 400ms;
+    --radius: 5px;
+}
+/* Variaveis: */
+
+/* Seleção: */
+::selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-moz-selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Seleção: */
+
+/* Efeitos de transição: */
+a, ul, li, .link-abre, nav, .menu {
+    -webkit-transition: all var(--tempo);
+    -moz-transition: all var(--tempo);
+    -ms-transition: all var(--tempo);
+    -o-transition: all var(--tempo);
+    transition: all var(--tempo);
+}
+/* :Efeitos de transição */
+
+
+/* Elementos: */
+h1, h2 {
+    display: block;
+    font-weight: 700;
+    clear: both;
+}
+
+h1 {
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+h3 {
+}
+
+h4 {
+}
+
+i {
+    display: inline-block;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+br {
+    clear: both;
+    display: block;
+}
+
+a {
+    
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    outline: none;
+}
+
+section {
+    position: relative;
+}
+
+article {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+article:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* :Elementos */
+
+
+/* Menu Desktop: */
+    nav.menu {
+        background-color: var(--secundaria);
+        height: 100vh;
+        width: 220px;
+        position: fixed;
+
+        img.logo { 
+            margin: 50px auto; 
+            display: block; 
+        }
+
+        a.home-link {
+            margin: 15px auto;
+            margin-left: var(--margin);
+            display: block;
+            font-weight: bold;
+            position: relative;
+
+            &:after {
+                content: '';
+                width: calc( 100% + 30px );
+                height: 1px;
+                background-color: #fff;
+                opacity: 0.5;
+                position: absolute;                
+                bottom: -15px;
+                left: -30px;
+            }
+        }
+
+        ul {
+            margin-left: var(--margin);
+            position: relative;
+            
+            > a {
+                font-weight: bold;
+            }
+
+            a.active {                  
+                position: relative;
+            }
+
+            a.active::before { 
+                content: ''; 
+                width: 22px; 
+                height: 13px; 
+                display: block; 
+                background-color: #fff; 
+                position: absolute; 
+                left: -30px; 
+                bottom: 0;
+                top: 0;                
+            }            
+
+            li {
+                margin-left: 14px;
+                line-height: normal;
+
+                a {
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }            
+            }
+
+            li {
+                display: none;
+            }
+        }
+
+        ul:first-of-type {
+            padding-top: 15px
+        }
+
+        a {
+            color: #fff;
+            font-size: 0.75rem;
+            line-height: 0.875rem;
+        }
+    }
+/* :Menu Desktop */
