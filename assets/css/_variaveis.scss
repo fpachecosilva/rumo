@@ -1,0 +1,147 @@
+/* Variaveis: */
+:root {
+    --principal: #003865;
+    --secundaria: #32A6E6;
+    --bgcinza: #f4f7f8;
+
+    --cinza1: #BDCCD4;
+    --cinza2: #EAEAEA;
+    --cinza3: #B7B7B7;
+    
+    --verde1: #1E9F7F;
+    --verde2: #7FE06C;
+
+    --amarelo: #FBD32F;
+    --laranja: #F78344;
+    --lilas: #9F4BB9;
+
+    --margin: 30px;
+    --tempo: 500ms;
+    --radius: 5px;
+}
+/* Variaveis: */
+
+/* Seleção: */
+::selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-moz-selection {
+    background: var(--principal);
+    color: #FFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Seleção: */
+
+/* Efeitos de transição: */
+a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links, .LinksAberto, nav.links {
+    -webkit-transition: all var(--tempo);
+    -moz-transition: all var(--tempo);
+    -ms-transition: all var(--tempo);
+    -o-transition: all var(--tempo);
+    transition: all var(--tempo);
+}
+/* :Efeitos de transição */
+
+
+
+.grid {
+    display: grid;
+
+    &--2colunas {
+        @extend .grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    &--3colunas {
+        @extend .grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    &--4colunas {
+        @extend .grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    &--2linhas {
+        @extend .grid;
+        grid-template-rows: 50% 50%;
+    }
+
+    &--4linhas {
+        @extend .grid;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    &--2colunas2linhas {
+        @extend .grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    &--2colunas4linhas {
+        @extend .grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    &--4colunas4linhas {
+        @extend .grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+}    
+
+.txt {    
+    
+    &--light {
+        font-weight: lighter;
+    }
+
+    &--regular {
+        font-weight: normal;
+    }
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--padrao12 {         
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+    } 
+
+    &--padrao20 {            
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &--padrao40 {            
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    
+    
+}
+
+
+

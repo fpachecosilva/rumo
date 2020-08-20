@@ -97,21 +97,63 @@ jQuery(document).ready(function() {
 		// 	})
 		// })
 
+
+		// Scroll suave
+		$('nav a[href^="#"]').on('click', function(e) {
+			e.preventDefault();
+			var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			  
+			$('html, body').animate({ 
+			  scrollTop: targetOffset
+			}, 500);
+		  });
+		
+
+
+
+		// Navegacao Menu
+		
 		$('.link-abre').click(function(event) {
 						
 			event.preventDefault();
 			$('.link-abre').removeClass('active')
 			$('li').hide();
 
-			$(this).addClass('active');				
+			$(this).addClass('active');
 			
-			if ($(this).hasClass('active')) {					
-				$(this).siblings().show();				
+			window.location.href = ($(this).attr('href'));
+			
+			// if ($(this).hasClass('active')) {					
+			// 	$(this).siblings().show();				
 				
-			} 
-			
+			// }
 		})
+
+
+		// Slider
+
+		// $('#sessao3 article').click(function() {
+			
+		// 	if( $('.beer-reveal').width() == '100%' ) {
+		// 		alert('igual a 100');
+		// 	} else {
+		// 		$('.beer-reveal').width() == '0';
+		// 	}
+			
+			
+		// })
 		
+
+
+		document.onload = testae();
+
+		function testae() {
+			
+			$('.active').siblings().show();
+
+		}
+
 
 
 
@@ -134,6 +176,22 @@ jQuery(document).ready(function() {
 	// Funções executadas apenas na versão Mobile:
 		function MobileVersion() {
 			 
+			// Abrir e fechar menu no Mobile
+			$('#abrirmenu').click(function() {
+				if($(this).hasClass('MenuAberto')) {
+
+					$(this).removeClass('MenuAberto');
+					$('.links').removeClass('LinksAberto');
+					
+					
+				} else {
+										
+					$(this).addClass('MenuAberto');
+					$('.links').addClass('LinksAberto');
+					
+					
+				}
+			});
 
 		}
 	// :Funções executadas apenas na versão Mobile
