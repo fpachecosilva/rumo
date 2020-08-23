@@ -79,25 +79,6 @@ jQuery(document).ready(function() {
 	// :GoogleMaps
 
 		
-		// $('.link-abre').each(function() {
-			
-		// 	$(this).click(function(event) {
-		// 		event.preventDefault();
-		// 		$('.link-abre').removeClass('active')
-		// 		$('li').hide();
-
-		// 		$(this).addClass('active');
-				
-				
-		// 		if ($(this).hasClass('active')) {					
-		// 			$(this).siblings().slideToggle('fast');
-					
-		// 		} 
-				
-		// 	})
-		// })
-
-
 		// Scroll suave
 		$('nav a[href^="#"]').on('click', function(e) {
 			e.preventDefault();
@@ -108,27 +89,39 @@ jQuery(document).ready(function() {
 			  scrollTop: targetOffset
 			}, 500);
 		  });
-		
+		  
 
-
-
-		// Navegacao Menu
-		
+		// Navegacao Menu		
 		$('.link-abre').click(function(event) {
 						
 			event.preventDefault();
 			$('.link-abre').removeClass('active')
 			$('li').hide();
 
-			$(this).addClass('active');
-			
-			window.location.href = ($(this).attr('href'));
-			
-			// if ($(this).hasClass('active')) {					
-			// 	$(this).siblings().show();				
-				
-			// }
+			$(this).addClass('active');			
+			window.location.href = ($(this).attr('href'));			
 		})
+
+		// Muda botao
+		$.fn.rotateClass = function(cls1, cls2, cls3) {
+			if ($(this).hasClass(cls1)) {
+				return $(this).removeClass(cls1).addClass(cls2);
+
+			} else if ($(this).hasClass(cls2)) {
+				return $(this).removeClass(cls2).addClass(cls3);
+
+			} else if ($(this).hasClass(cls3)) {
+				return $(this).removeClass(cls3).addClass(cls1);
+				
+			} else {
+				return $(this).toggleClass(cls1); // Default case.
+			}
+		}
+	
+		
+		$('#sessao6').on('click', function(e) {
+			$('#mudabotao').rotateClass('estado1', 'estado2', 'estado3').animate();
+		});
 
 
 		// Slider
@@ -146,11 +139,11 @@ jQuery(document).ready(function() {
 		
 
 
-		document.onload = testae();
+		document.onload = showLi();
 
-		function testae() {
+		function showLi() {
 			
-			$('.active').siblings().show();
+			$('.active').siblings().fadeIn(500);
 
 		}
 
@@ -160,15 +153,7 @@ jQuery(document).ready(function() {
 	// Funções executadas apenas na versão Desktop:
 		function DesktopVersion() {
             
-            // $('.nav_home .item').hover(function () {
-            //     if($(this).find('.dropdown').hasClass('hide')){                    
-            //         $(this).find('.dropdown').removeClass('hide') 
-            //     }else{
-            //         $(this).find('.dropdown').addClass('hide')
-            //     }
-            // })
-
-            
+                        
 
 		}
 	// :Funções executadas apenas na versão Desktop
@@ -199,7 +184,7 @@ jQuery(document).ready(function() {
 	// Executando versionamentos
 		if(WidthDevice <= 900) { MobileVersion(); } else { DesktopVersion(); }
 	// FadeIn da página após o carregamento.
-		$('body').fadeIn('slow');
+		$('body').fadeIn(1000);
 	// ScrollTop
 		// $('html, body').animate({scrollTop: '0px'}, 600);
 
