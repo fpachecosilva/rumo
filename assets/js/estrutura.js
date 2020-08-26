@@ -114,49 +114,345 @@ jQuery(document).ready(function() {
 				return $(this).removeClass(cls3).addClass(cls1);
 				
 			} else {
-				return $(this).toggleClass(cls1); // Default case.
+				return $(this).toggleClass(cls1);
 			}
-		}
-	
+		}	
 		
 		$('#sessao6').on('click', function(e) {
 			$('#mudabotao').rotateClass('estado1', 'estado2', 'estado3').animate();
 		});
 
 
-		// Slider
+		// Exercite o tom de voz Sessao3
+		$(document).ready( function() {
+			
+			var total = $('#sessao3 .cima span').length;
+			$('#sessao3 #total').text(total);
+			var ativo =  $('#sessao3 .dir span.active').index() + 1;
+			$('#sessao3 #atual').text(ativo);
 
-		// $('#sessao3 article').click(function() {
+			$('#sessao3 .setas .avancar').click( function() {
+				
+				var ativo =  $('#sessao3 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-2;
+
+				// Controle de opacidade das setas
+				if ( proximo + 1 == total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( proximo + 1 != total ) {
+					$('#sessao3 .setas .voltar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( proximo == total ) {
+					return false;
+				} else {
+
+					$('#sessao3 .dir span.active').removeClass('active');
+					$('#sessao3 #atual').text(index+2)
+
+					$('#sessao3 .dir span').each(function() {
+						if ($(this).index() == proximo ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			var ativo =  $('#sessao3 .dir span.active').index();
+
+			$('#sessao3 .setas .voltar').click( function() {
+				
+				var ativo =  $('#sessao3 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-1;
+
+				// Controle de opacidade das setas
+				if ( anterior == total - total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( anterior != total - total ) {
+					$('#sessao3 .setas .avancar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( anterior == -1 ) {
+					return false;
+				} else {
+
+					$('#sessao3 .dir span.active').removeClass('active');
+					$('#sessao3 #atual').text(index)
+
+					$('#sessao3 .dir span').each(function() {
+						if ($(this).index() == anterior ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			// Controle de cores
+			$('#sessao3 .cima').click(function(){
+				$('#sessao3 .exercite').removeClass('certo')
+				$('#sessao3 .exercite').toggleClass('errado')				
+			})
+
+			$('#sessao3 .baixo').click(function(){				
+				$('#sessao3 .exercite').removeClass('errado')
+				$('#sessao3 .exercite').toggleClass('certo')
+			})
+
+			$('#sessao3 .principal').click(function(){
+				$('#sessao3 .exercite').removeClass('errado certo')
+			})
+
+		})
+
+		// Exercite o tom de voz Sessao5
+		$(document).ready( function() {
 			
-		// 	if( $('.beer-reveal').width() == '100%' ) {
-		// 		alert('igual a 100');
-		// 	} else {
-		// 		$('.beer-reveal').width() == '0';
-		// 	}
+			var total = $('#sessao5 .cima span').length;
+			$('#sessao5 #total').text(total);
+			var ativo =  $('#sessao5 .dir span.active').index() + 1;
+			$('#sessao5 #atual').text(ativo);
+
+			$('#sessao5 .setas .avancar').click( function() {
+				
+				var ativo =  $('#sessao5 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-2;
+
+				// Controle de opacidade das setas
+				if ( proximo + 1 == total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( proximo + 1 != total ) {
+					$('#sessao5 .setas .voltar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( proximo == total ) {
+					return false;
+				} else {
+
+					$('#sessao5 .dir span.active').removeClass('active');
+					$('#sessao5 #atual').text(index+2)
+
+					$('#sessao5 .dir span').each(function() {
+						if ($(this).index() == proximo ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			var ativo =  $('#sessao5 .dir span.active').index();
+
+			$('#sessao5 .setas .voltar').click( function() {
+				
+				var ativo =  $('#sessao5 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-1;
+
+				// Controle de opacidade das setas
+				if ( anterior == total - total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( anterior != total - total ) {
+					$('#sessao5 .setas .avancar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( anterior == -1 ) {
+					return false;
+				} else {
+
+					$('#sessao5 .dir span.active').removeClass('active');
+					$('#sessao5 #atual').text(index)
+
+					$('#sessao5 .dir span').each(function() {
+						if ($(this).index() == anterior ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			// Controle de cores
+			$('#sessao5 .cima').click(function(){
+				$('#sessao5 .exercite').removeClass('certo')
+				$('#sessao5 .exercite').toggleClass('errado')				
+			})
+
+			$('#sessao5 .baixo').click(function(){				
+				$('#sessao5 .exercite').removeClass('errado')
+				$('#sessao5 .exercite').toggleClass('certo')
+			})
+
+			$('#sessao5 .principal').click(function(){
+				$('#sessao5 .exercite').removeClass('errado certo')
+			})
+
+		})
+
+		// Exercite o tom de voz Sessao7
+		$(document).ready( function() {
 			
-			
-		// })
+			var total = $('#sessao7 .cima span').length;
+			$('#sessao7 #total').text(total);
+			var ativo =  $('#sessao7 .dir span.active').index() + 1;
+			$('#sessao7 #atual').text(ativo);
+
+			$('#sessao7 .setas .avancar').click( function() {
+				
+				var ativo =  $('#sessao7 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-2;
+
+				// Controle de opacidade das setas
+				if ( proximo + 1 == total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( proximo + 1 != total ) {
+					$('#sessao7 .setas .voltar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( proximo == total ) {
+					return false;
+				} else {
+
+					$('#sessao7 .dir span.active').removeClass('active');
+					$('#sessao7 #atual').text(index+2)
+
+					$('#sessao7 .dir span').each(function() {
+						if ($(this).index() == proximo ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			var ativo =  $('#sessao7 .dir span.active').index();
+
+			$('#sessao7 .setas .voltar').click( function() {
+				
+				var ativo =  $('#sessao7 .dir span.active');
+				var index = ativo.index();
+				var proximo = index+1;
+				var anterior = index-1;
+
+				// Controle de opacidade das setas
+				if ( anterior == total - total ) {
+					$(this).addClass('op20');
+				}
+
+				if ( anterior != total - total ) {
+					$('#sessao7 .setas .avancar').removeClass('op20');
+				}
+				
+				// Controle de limites das setas
+				if ( anterior == -1 ) {
+					return false;
+				} else {
+
+					$('#sessao7 .dir span.active').removeClass('active');
+					$('#sessao7 #atual').text(index)
+
+					$('#sessao7 .dir span').each(function() {
+						if ($(this).index() == anterior ) {
+							$(this).addClass('active');						 
+						}
+					})
+				}
+			})
+
+			// Controle de cores
+			$('#sessao7 .cima').click(function(){
+				$('#sessao7 .exercite').removeClass('certo')
+				$('#sessao7 .exercite').toggleClass('errado')				
+			})
+
+			$('#sessao7 .baixo').click(function(){				
+				$('#sessao7 .exercite').removeClass('errado')
+				$('#sessao7 .exercite').toggleClass('certo')
+			})
+
+			$('#sessao7 .principal').click(function(){
+				$('#sessao7 .exercite').removeClass('errado certo')
+			})
+
+		})
 		
 
+		// Controle de abertura do menu
+		document.onload = showMenu();
 
-		document.onload = showLi();
-
-		function showLi() {
-			
-			$('.active').siblings().fadeIn(500);
-
+		function showMenu() {			
+			$('.link-abre.active').siblings().fadeIn(200);
 		}
-
-
 
 
 	// Funções executadas apenas na versão Desktop:
 		function DesktopVersion() {
             
-                        
+           //Nav Tabs		
+			$(document).ready( function() {
+				var sizeInitial = $('.nav li.active').width()
+				$('.slider-bar').css('width', sizeInitial + 20)
+			})	
+			
+			$('#sessao2 .nav_tabs .nav li').click(function () {				
+				var nav = $(this).attr('nav')
+				var size = $(this).width();
+				var pos = $(this).position().left		
+				$('#sessao2 .nav_tabs .tab').removeClass('active')
+				$('#sessao2 .nav_tabs .nav li').removeClass('active')
+				$(this).addClass('active')
+				$('#sessao2 .nav_tabs .tab:eq('+nav+')').addClass('active')
+				$('#sessao2 .slider-bar').width(size + 20)
+				$('#sessao2 .slider-bar').css('margin-left',pos)	
+			})
 
+			$('#sessao4 .nav_tabs .nav li').click(function () {				
+				var nav = $(this).attr('nav')
+				var size = $(this).width();
+				var pos = $(this).position().left		
+				$('#sessao4 .nav_tabs .tab').removeClass('active')
+				$('#sessao4 .nav_tabs .nav li').removeClass('active')
+				$(this).addClass('active')
+				$('#sessao4 .nav_tabs .tab:eq('+nav+')').addClass('active')
+				$('#sessao4 .slider-bar').width(size + 20)
+				$('#sessao4 .slider-bar').css('margin-left',pos)	
+			})
+
+			$('#sessao6 .nav_tabs .nav li').click(function () {				
+				var nav = $(this).attr('nav')
+				var size = $(this).width();
+				var pos = $(this).position().left		
+				$('#sessao6 .nav_tabs .tab').removeClass('active')
+				$('#sessao6 .nav_tabs .nav li').removeClass('active')
+				$(this).addClass('active')
+				$('#sessao6 .nav_tabs .tab:eq('+nav+')').addClass('active')
+				$('#sessao6 .slider-bar').width(size + 20)
+				$('#sessao6 .slider-bar').css('margin-left',pos)	
+			})
 		}
 	// :Funções executadas apenas na versão Desktop
+
+
 
 	// Funções executadas apenas na versão Mobile:
 		function MobileVersion() {

@@ -195,6 +195,28 @@ a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links,
   line-height: 2.5rem;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.op20 {
+  opacity: 0.2;
+}
+
 /* Elementos Desktop: */
 h1, h2 {
   display: block;
@@ -1649,15 +1671,28 @@ header.logotipo {
           justify-content: center;
 }
 
+#grafismos #sessao6 .wrapper .dir img {
+  opacity: 0;
+}
+
 #grafismos #sessao6 #mudabotao.estado1 {
+  -webkit-animation: fade 0.8s linear;
+          animation: fade 0.8s linear;
+  opacity: 1;
   content: url("../img/grafismos-sessao6-03-estado1.svg");
 }
 
 #grafismos #sessao6 #mudabotao.estado2 {
+  -webkit-animation: fade 0.8s linear;
+          animation: fade 0.8s linear;
+  opacity: 1;
   content: url("../img/grafismos-sessao6-03-estado2.svg");
 }
 
 #grafismos #sessao6 #mudabotao.estado3 {
+  -webkit-animation: fade 0.8s linear;
+          animation: fade 0.8s linear;
+  opacity: 1;
   content: url("../img/grafismos-sessao6-03-estado3.svg");
 }
 
@@ -1756,6 +1791,363 @@ header.logotipo {
 }
 
 /* :Pagina Iconografia Desktop */
+/* Pagina Tom de Voz Desktop: */
+#tomdevoz .topobg {
+  background-color: var(--verde1);
+  background-image: url("../img/tomdevozbg.png");
+  background-position: right 45px center;
+}
+
+#tomdevoz .wrapper-abas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 607px;
+      grid-template-columns: auto 607px;
+}
+
+#tomdevoz .wrapper-abas .esq p.txt--padrao20 {
+  color: var(--verde1);
+  margin-bottom: 40px;
+}
+
+#tomdevoz .wrapper-abas .esq p.txt--padrao12 {
+  max-width: 250px;
+}
+
+#tomdevoz #sessao1 {
+  padding: 80px 0 30px 0;
+}
+
+#tomdevoz #sessao1 article .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+#tomdevoz #sessao1 article .wrapper .esq p {
+  margin-right: 115px;
+  margin-top: 35px;
+  max-width: 300px;
+}
+
+#tomdevoz #sessao1 article .wrapper .dir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#tomdevoz #sessao2 {
+  padding-top: 77px;
+  padding-bottom: 90px;
+}
+
+#tomdevoz #sessao2 article > p.txt--padrao40 {
+  margin-bottom: 77px;
+}
+
+#tomdevoz #sessao4 {
+  padding-top: 54px;
+  padding-bottom: 111px;
+}
+
+#tomdevoz #sessao4 article > p.txt--padrao40 {
+  margin-bottom: 77px;
+}
+
+#tomdevoz #sessao6 {
+  padding-top: 124px;
+  padding-bottom: 90px;
+}
+
+#tomdevoz #sessao8 {
+  padding-top: 155px;
+}
+
+#tomdevoz #sessao8 article p {
+  margin-bottom: 27px;
+}
+
+#tomdevoz #sessao8 .wrapper {
+  background-color: #E6E6E6;
+  display: -ms-grid;
+  display: grid;
+}
+
+#tomdevoz #sessao8 .wrapper .interno img {
+  width: 100%;
+}
+
+#tomdevoz .nav_tabs {
+  max-width: 607px;
+}
+
+#tomdevoz .nav_tabs .nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+}
+
+#tomdevoz .nav_tabs .nav .slider {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+}
+
+#tomdevoz .nav_tabs .nav .slider .slider-bar {
+  height: 3px;
+  background-color: var(--principal);
+  display: block;
+  bottom: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#tomdevoz .nav_tabs .nav li {
+  padding: 15px 10px;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  margin-right: 90px;
+}
+
+#tomdevoz .nav_tabs > .content {
+  background: #fff;
+  border-top: 1px solid #7F9BB1;
+}
+
+#tomdevoz .nav_tabs .content .tab {
+  display: none;
+  width: 100%;
+  padding-top: 35px;
+  opacity: 0;
+}
+
+#tomdevoz .nav_tabs .content .tab.active {
+  display: block;
+  opacity: 1;
+  -webkit-animation: fade 0.8s linear;
+          animation: fade 0.8s linear;
+}
+
+#tomdevoz .nav_tabs .content p {
+  font-style: italic;
+  font-size: 0.75rem;
+  line-height: 1.3125rem;
+}
+
+#tomdevoz .exercite {
+  min-height: 506px;
+  background-color: var(--principal);
+}
+
+#tomdevoz .exercite .esq .principal {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+#tomdevoz .exercite .esq .principal .topo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 20px;
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+#tomdevoz .exercite .esq .principal .topo div:first-child {
+  width: 90%;
+}
+
+#tomdevoz .exercite .esq .principal .topo div:last-child {
+  width: 10%;
+}
+
+#tomdevoz .exercite .esq .principal .topo .paginacao {
+  text-align: right;
+}
+
+#tomdevoz .exercite .esq .principal .setas {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-bottom: 60px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#tomdevoz .exercite .esq .principal .setas .voltar {
+  background-image: url("../img/voltar.svg");
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  width: 19px;
+  height: 32px;
+}
+
+#tomdevoz .exercite .esq .principal .setas .avancar {
+  background-image: url("../img/avancar.svg");
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  width: 19px;
+  height: 32px;
+}
+
+#tomdevoz .exercite .esq .principal .texto-principal {
+  margin-left: 50px;
+  font-size: 2.1875rem;
+  line-height: 2.1875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tomdevoz .exercite .dir {
+  color: #fff;
+}
+
+#tomdevoz .exercite .dir div {
+  padding: 0 42px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  position: relative;
+}
+
+#tomdevoz .exercite .dir div:first-child:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--verde1);
+  position: absolute;
+  bottom: 0;
+}
+
+#tomdevoz .exercite .dir .cima {
+  cursor: pointer;
+}
+
+#tomdevoz .exercite .dir .cima span {
+  display: none;
+  opacity: 0;
+}
+
+#tomdevoz .exercite .dir .cima span.active {
+  display: block;
+  opacity: 1;
+  -webkit-animation: fade 1s linear;
+          animation: fade 1s linear;
+}
+
+#tomdevoz .exercite .dir .baixo {
+  cursor: pointer;
+}
+
+#tomdevoz .exercite .dir .baixo span {
+  display: none;
+  opacity: 0;
+}
+
+#tomdevoz .exercite .dir .baixo span.active {
+  display: block;
+  opacity: 1;
+  -webkit-animation: fade 2s linear;
+          animation: fade 2s linear;
+}
+
+#tomdevoz .exercite.estado-padrao .esq {
+  background-color: var(--verde1);
+}
+
+#tomdevoz .exercite.estado-padrao .esq .texto-principal {
+  color: var(--principal);
+}
+
+#tomdevoz .exercite.errado .esq {
+  background-color: #EA5B5B;
+  cursor: pointer;
+}
+
+#tomdevoz .exercite.errado .esq .texto-principal {
+  color: #fff;
+}
+
+#tomdevoz .exercite.errado .esq .topo {
+  color: #fff;
+}
+
+#tomdevoz .exercite.errado .esq .setas .voltar {
+  background-image: url("../img/voltar-white.svg") !important;
+}
+
+#tomdevoz .exercite.errado .esq .setas .avancar {
+  background-image: url("../img/avancar-white.svg") !important;
+}
+
+#tomdevoz .exercite.errado .dir div:first-child:before {
+  display: none;
+}
+
+#tomdevoz .exercite.errado .dir .cima {
+  background-color: #EA5B5B;
+}
+
+#tomdevoz .exercite.certo .esq {
+  background-color: var(--verde2);
+  cursor: pointer;
+}
+
+#tomdevoz .exercite.certo .dir div:first-child:before {
+  display: none;
+}
+
+#tomdevoz .exercite.certo .dir .cima {
+  color: #1a4c74;
+}
+
+#tomdevoz .exercite.certo .dir .baixo {
+  background-color: var(--verde2);
+  color: var(--principal);
+}
+
+/* :Pagina Tom de Voz Desktop */
 /* Pagina Download Desktop: */
 #download.verde {
   background-color: var(--verde2);
@@ -2622,6 +3014,34 @@ footer .trademark p {
     text-align: center;
   }
   /* :Pagina Grafismos Mobile */
+  /* Pagina Iconografia Mobile: */
+  #iconografia .topobg {
+    background-position-x: -128px;
+    background-size: 605px;
+  }
+  #iconografia #sessao1 article p.topo {
+    margin: 42px 0 86px 0;
+  }
+  #iconografia #sessao2 {
+    margin-bottom: 35px;
+  }
+  #iconografia #sessao2 article .wrapper > div:last-of-type {
+    margin-top: 85px;
+  }
+  #iconografia #sessao3 {
+    padding-bottom: 85px;
+  }
+  #iconografia #sessao3 img {
+    margin-top: 30px;
+  }
+  #iconografia #sessao4 {
+    overflow-x: auto;
+  }
+  #iconografia #sessao4 img {
+    width: 900px;
+    max-width: 900px;
+  }
+  /* :Pagina Iconografia Mobile */
   /* Pagina Download Mobile: */
   #download p.txt--padrao40 {
     margin-bottom: 40px;

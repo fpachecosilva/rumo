@@ -134,7 +134,19 @@ a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links,
 
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;        
+    }
 
+    100% {
+        opacity: 1;        
+    }
+}
+
+.op20 {
+    opacity: 0.2;
+}
 
 
 @media screen and (max-width: 900px) {

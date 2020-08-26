@@ -1546,22 +1546,35 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    img {
+                        opacity: 0;
+                    }
                 }
 
             }
 
             #mudabotao {
+
                 &.estado1 {
+                    animation: fade 0.8s linear;
+                    opacity: 1;                    
                     content: url('../img/grafismos-sessao6-03-estado1.svg');
                 }
 
                 &.estado2 {
-                    content: url('../img/grafismos-sessao6-03-estado2.svg');
+                    animation: fade 0.8s linear;
+                    opacity: 1;                    
+                    content: url('../img/grafismos-sessao6-03-estado2.svg');                    
                 }
 
                 &.estado3 {
-                    content: url('../img/grafismos-sessao6-03-estado3.svg');
+                    animation: fade 0.8s linear;
+                    opacity: 1;                    
+                    content: url('../img/grafismos-sessao6-03-estado3.svg');  
+                                     
                 }
+                
             }
             
         }
@@ -1687,6 +1700,405 @@ main {
 /* :Pagina Iconografia Desktop */
 
 
+
+/* Pagina Tom de Voz Desktop: */
+
+    #tomdevoz {
+
+        .topobg {
+            background-color: var(--verde1);
+            background-image: url('../img/tomdevozbg.png');
+            background-position: right 45px center;
+        }
+
+        .wrapper-abas {
+            
+            display: grid;
+            grid-template-columns: auto 607px;
+
+            .esq {
+                p.txt--padrao20 {                    
+                    color: var(--verde1);
+                    margin-bottom: 40px;
+                }
+
+                p.txt--padrao12 {
+                    max-width: 250px;
+                }
+            }
+
+            .dir {
+
+            }            
+        }
+
+        #sessao1 {
+            padding: 80px 0 30px 0;
+
+            article {
+                .wrapper {
+                    display: grid;
+                    grid-template-columns: auto auto;
+
+                    .esq {
+                        p {
+                            margin-right: 115px;
+                            margin-top: 35px;
+                            max-width: 300px;
+                        }
+                    }
+
+                    .dir {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+
+        #sessao2 {
+            padding-top: 77px;
+            padding-bottom: 90px;
+
+            article {
+                > p.txt--padrao40 {
+                    margin-bottom: 77px;
+                }
+            }
+        }
+
+        #sessao4 {
+            padding-top: 54px;
+            padding-bottom: 111px;
+
+            article {
+                > p.txt--padrao40 {
+                    margin-bottom: 77px;
+                }
+            }
+        }
+
+        #sessao6 {
+            padding-top: 124px;
+            padding-bottom: 90px;
+        }
+
+        #sessao8 {
+            padding-top: 155px;
+
+            article {
+                p {
+                    margin-bottom: 27px;
+                }
+            }
+
+            .wrapper {                
+                background-color: #E6E6E6;
+                display: grid;
+                // justify-content: center;
+                
+
+                .interno {
+                    // max-width: 1100px;
+
+                    img {
+                        width: 100%
+                    }
+                }
+            }
+        }
+
+
+        .nav_tabs {
+            // margin-bottom: 73px;
+            max-width: 607px;
+
+            .nav {
+                display: inline-flex;
+                position: relative;
+                
+                .slider {
+                    width: 100%;
+                    height: 3px;
+                    position: absolute;
+                    bottom: 0;                    
+
+                    .slider-bar {
+                        
+                        height: 3px;
+                        background-color: var(--principal);
+                        display: block;                        
+                        bottom: 0;
+                        transition: all 500ms ease-in-out;
+                    }
+                }                
+                
+                li {
+                    padding: 15px 10px;
+                    display: block;
+                    font-weight: bold;
+                    cursor: pointer;
+                    font-size: 18px;
+                    position: relative;
+                    margin-right: 90px;
+
+                    &.active {
+                        // border-bottom: 3px solid var(--principal);
+                    }                    
+                }
+                
+                
+            }
+
+            > .content {
+                background: #fff;
+                border-top: 1px solid #7F9BB1;
+            }
+
+            .content {
+                .tab {
+                    display: none;
+                    width: 100%;
+                    padding-top: 35px;
+                    opacity: 0;                                        
+
+                    &.active {
+                        display: block;
+                        opacity: 1;
+                        animation: fade 0.8s linear;
+                    }
+                }
+
+                p {
+                    font-style: italic;
+                    font-size: 0.75rem;
+                    line-height: 1.3125rem;                    
+                }
+            }
+        }
+
+
+        .exercite {
+            // max-width: 1100px;
+            min-height: 506px;
+            background-color: var(--principal);            
+
+            .esq {
+
+                .principal {
+                    height: 100%;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr;                    
+
+                    .topo {
+                        display: inline-flex;
+                        height: 20px;
+                        margin-left: 50px;
+                        margin-right: 25px;
+                        margin-top: 25px;
+                        text-transform: uppercase;
+                        font-size: 0.875rem;
+                        font-weight: bold;
+
+                        div:first-child {
+                            width: 90%;
+                        }
+
+                        div:last-child {
+                            width: 10%;
+                        }
+
+                        .paginacao {
+                            text-align: right;
+                        }
+                    }
+
+                    .setas {
+                        display: inline-flex;
+                        margin-left: 50px;
+                        margin-right: 25px;
+                        margin-bottom: 60px;
+                        align-items: flex-end;
+                        justify-content: space-between;                        
+
+                        .voltar {
+                            background-image: url('../img/voltar.svg');
+                            background-repeat: no-repeat;
+                            display: block;
+                            cursor: pointer;
+                            width: 19px;
+                            height: 32px;                            
+                        }
+
+                        .avancar {
+                            background-image: url('../img/avancar.svg');
+                            background-repeat: no-repeat;
+                            display: block;
+                            cursor: pointer;
+                            width: 19px;
+                            height: 32px;                            
+                        }
+                    }
+
+                    .texto-principal {
+                        margin-left: 50px;
+                        font-size: 2.1875rem;
+                        line-height: 2.1875rem;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;                        
+                    }
+                }
+            }
+
+            .dir {                
+
+                color: #fff;
+
+                div {
+                    padding: 0 42px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.875rem;
+                    line-height: 1.875rem;
+                    text-align: center;
+                    position: relative;
+
+                    &:first-child {
+                        &:before {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: var(--verde1);
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                .cima {
+                    cursor:pointer;
+
+                    span {
+                        display: none;
+                        opacity: 0;
+
+                        &.active {
+                            display: block;
+                            opacity: 1;
+                            animation: fade 1s linear; 
+                        }
+                    }
+                }
+
+                .baixo {
+                    cursor:pointer;
+                    
+                    span {
+                        display: none;
+                        opacity: 0;
+
+                        &.active {
+                            display: block;
+                            opacity: 1;
+                            animation: fade 2s linear;  
+                        }
+                    }
+                }
+            }
+
+            //Padrao de cores
+
+
+            &.estado-padrao {                                            
+                .esq {
+                    background-color: var(--verde1);
+                    
+                    .texto-principal {
+                        color: var(--principal);
+                    }
+                }
+            }
+
+            &.errado {   
+                             
+                .esq {
+                    background-color: #EA5B5B;
+                    cursor: pointer;
+                    
+                    .texto-principal {
+                        color: #fff;
+                    }
+    
+                    .topo {
+                        color: #fff
+                    }
+    
+                    .setas {
+                        .voltar {
+                            background-image: url('../img/voltar-white.svg')!important;
+                        }
+    
+                        .avancar {
+                            background-image: url('../img/avancar-white.svg')!important;
+                        }
+                    }
+                }
+
+                .dir {                    
+                    div {
+                        &:first-child {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .cima {
+                        background-color: #EA5B5B;
+                    }
+                }
+            }
+
+            &.certo {
+                
+                
+                .esq {
+                    background-color: var(--verde2);
+                    cursor: pointer;
+                }
+
+                .dir {                    
+                    div {
+                        &:first-child {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                    
+                    .cima {
+                        color: #1a4c74;
+                    }
+    
+                    .baixo {
+                        background-color: var(--verde2);
+                        color: var(--principal);
+                    }
+                }
+            }
+
+            
+        }
+        
+        
+    }
+    
+
+/* :Pagina Tom de Voz Desktop */
 
 
 
@@ -2862,6 +3274,58 @@ main {
 /* :Pagina Grafismos Mobile */
 
 
+/* Pagina Iconografia Mobile: */
+
+    #iconografia {
+        .topobg {
+            background-position-x: -128px;
+            background-size: 605px;
+        }
+
+        #sessao1 {
+            article {
+                p.topo {
+                    margin: 42px 0 86px 0;
+                }
+            }
+        }
+
+        #sessao2 {
+            margin-bottom: 35px;
+
+            article {
+                .wrapper {
+                    > div {
+                        &:last-of-type {
+                            margin-top: 85px;
+                        }
+                    }
+                   
+                }
+            }
+        }
+
+        #sessao3 {
+            padding-bottom: 85px;
+
+            img {
+                margin-top: 30px;
+            }
+        }
+
+        #sessao4 {
+            overflow-x: auto;
+
+            img {
+                width: 900px;
+                max-width: 900px;
+            }
+        }
+    }
+
+/* :Pagina Iconografia Mobile */
+
+
 /* Pagina Download Mobile: */
     #download {
 
@@ -2909,6 +3373,13 @@ main {
 /* :Footer Mobile */
 
 }
+
+
+
+
+
+
+
 
 
 
