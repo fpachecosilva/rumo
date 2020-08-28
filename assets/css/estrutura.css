@@ -74,7 +74,7 @@ body p {
   --cinza3: #B7B7B7;
   --verde1: #1E9F7F;
   --verde2: #7FE06C;
-  --amarelo: #FBD32F;
+  --amarelo: #FBD300;
   --laranja: #F78344;
   --lilas: #9F4BB9;
   --margin: 30px;
@@ -349,6 +349,18 @@ nav {
 nav.menu {
   background-color: var(--secundaria);
   height: 100%;
+}
+
+nav.menu a.active::after {
+  content: '';
+  width: 22px;
+  height: 13px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  top: 0;
 }
 
 nav.menu img.logo {
@@ -843,6 +855,82 @@ header.logotipo {
 
 /* :Pagina Logotipo Desktop */
 /* Pagina Paleta Desktop: */
+.accordeon .wrapper-acc {
+  max-width: 445px;
+  height: 316px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.accordeon .wrapper-acc .box {
+  width: 60px;
+  height: 100%;
+  display: block;
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 18px 25px 22px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-animation: fade 0.2s linear;
+          animation: fade 0.2s linear;
+}
+
+.accordeon .wrapper-acc .box:last-of-type {
+  margin-right: 0;
+}
+
+.accordeon .wrapper-acc .box.ativo {
+  width: 205px;
+}
+
+.accordeon .wrapper-acc .box.ativo p {
+  opacity: 1;
+}
+
+.accordeon .wrapper-acc .box p {
+  display: block;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  opacity: 0;
+  margin: 0 !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.accordeon .wrapper-acc .box p.nome {
+  font-weight: bold;
+}
+
+.accordeon .wrapper-acc .box p.desc {
+  position: absolute;
+  bottom: 55px;
+}
+
+.accordeon .wrapper-acc .box1 {
+  background-color: var(--principal);
+}
+
+.accordeon .wrapper-acc .box2 {
+  background-color: var(--secundaria);
+}
+
+.accordeon .wrapper-acc .box3 {
+  background-color: var(--verde1);
+}
+
+.accordeon .wrapper-acc .box4 {
+  background-color: var(--verde2);
+}
+
+.accordeon .wrapper-acc .box4 p {
+  color: var(--principal);
+}
+
 #paleta .topobg {
   background-image: url(../img/paletatopo.png);
   background-position: right 45px center;
@@ -853,7 +941,7 @@ header.logotipo {
 }
 
 #paleta #sessao1 .txt--padrao40, #paleta #sessao2 .txt--padrao40 {
-  margin-bottom: 25px;
+  margin-bottom: 13px;
 }
 
 #paleta #sessao1 article, #paleta #sessao2 article {
@@ -896,6 +984,30 @@ header.logotipo {
 
 #paleta #sessao2 .accordeon {
   bottom: 85px;
+}
+
+#paleta #sessao2 .accordeon .box1 {
+  background-color: var(--amarelo);
+}
+
+#paleta #sessao2 .accordeon .box1 p {
+  color: var(--principal);
+}
+
+#paleta #sessao2 .accordeon .box2 {
+  background-color: var(--laranja);
+}
+
+#paleta #sessao2 .accordeon .box3 {
+  background-color: var(--lilas);
+}
+
+#paleta #sessao2 .accordeon .box4 {
+  background-color: var(--cinza1);
+}
+
+#paleta #sessao2 .accordeon .box4 p {
+  color: var(--principal);
 }
 
 #paleta #sessao3 img {
@@ -1886,9 +1998,9 @@ header.logotipo {
 }
 
 #tomdevoz .nav_tabs .nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
   position: relative;
 }
 
@@ -2377,6 +2489,10 @@ footer .trademark p {
     position: absolute;
     background-color: #fff;
     border-radius: 1px;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
   }
   #abrirmenu #Cima {
     top: 27px;
@@ -2405,21 +2521,24 @@ footer .trademark p {
   nav .links {
     background-color: var(--secundaria);
     padding-top: 50px;
-    height: auto;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    width: 100%;
+    height: 0;
     z-index: 100;
     overflow-y: auto;
+    width: 100%;
+    opacity: 0;
   }
   nav .links ul li {
     line-height: 1.8;
   }
   .LinksAberto {
     display: block !important;
-    -webkit-transform: scaleY(1) !important;
-            transform: scaleY(1) !important;
     overflow-y: auto;
+    opacity: 1 !important;
+    top: initial;
+    position: initial;
+    height: 100vh;
+    -webkit-animation: fade 1s linear;
+            animation: fade 1s linear;
   }
   .navfooter {
     position: relative;
@@ -2442,11 +2561,20 @@ footer .trademark p {
   nav.menu {
     width: 100%;
     height: 66px;
+    overflow-y: auto;
   }
   nav.menu img.logo {
     margin: 0;
     padding-top: 23px;
     padding-left: 26px;
+  }
+  nav.menu a {
+    font-size: 16px;
+    font-weight: normal !important;
+    line-height: 35px !important;
+  }
+  nav.menu a .home-link {
+    font-weight: normal !important;
   }
   /* :Menu Mobile */
   /* Header Mobile: */
@@ -2616,6 +2744,30 @@ footer .trademark p {
   .destaque-ideia {
     width: 100%;
     height: 65px;
+  }
+  #paleta .accordeon .wrapper-acc {
+    -ms-grid-columns: initial;
+        grid-template-columns: initial;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 402px;
+  }
+  #paleta .accordeon .wrapper-acc .box {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  #paleta .accordeon .wrapper-acc .box:last-of-type {
+    margin-bottom: 0;
+  }
+  #paleta .accordeon .wrapper-acc .box.ativo {
+    height: 186px;
+  }
+  #paleta .accordeon .wrapper-acc .box p.desc {
+    bottom: initial;
+    top: 85px;
   }
   #paleta .topobg {
     background-size: 400px;
@@ -3042,6 +3194,144 @@ footer .trademark p {
     max-width: 900px;
   }
   /* :Pagina Iconografia Mobile */
+  /* Pagina Tom de Voz Mobile: */
+  #tomdevoz .topobg {
+    background-size: 350px;
+    background-position-y: 30px;
+    background-position-x: 112px;
+  }
+  #tomdevoz .wrapper-abas {
+    display: block;
+  }
+  #tomdevoz .wrapper-abas .esq p.verde {
+    margin-bottom: 28px;
+  }
+  #tomdevoz .wrapper-abas .dir {
+    margin-top: 62px;
+  }
+  #tomdevoz .wrapper-abas .dir ul.desktopitem {
+    display: none !important;
+  }
+  #tomdevoz .wrapper-abas .dir .content {
+    border-top: 0;
+  }
+  #tomdevoz .wrapper-abas .dir .content .tab {
+    display: block;
+    opacity: 1;
+    padding-top: 12px;
+    margin-bottom: 62px;
+  }
+  #tomdevoz .wrapper-abas .dir .content .tab p {
+    margin-bottom: 35px;
+    font-size: 1rem;
+  }
+  #tomdevoz .wrapper-abas .dir .content .tab:last-of-type {
+    margin-bottom: 0;
+  }
+  #tomdevoz .wrapper-abas .dir .content .titulo {
+    display: inline-block !important;
+    border-bottom: 3px solid var(--principal);
+    font-weight: bold;
+    padding: 0 10px;
+    padding-bottom: 7px;
+  }
+  #tomdevoz .wrapper-abas .dir .content hr {
+    margin-top: -1px;
+    opacity: .5;
+  }
+  #tomdevoz .exercite {
+    margin: 0 16px;
+    background-color: initial;
+    min-height: initial;
+  }
+  #tomdevoz .exercite .esq .principal {
+    height: 451px;
+    display: block;
+    position: relative;
+  }
+  #tomdevoz .exercite .esq .principal .topo {
+    padding: 17px 21px 0 21px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #tomdevoz .exercite .esq .principal .topo div:first-child {
+    font-size: 0.625rem;
+  }
+  #tomdevoz .exercite .esq .principal .topo .paginacao {
+    font-size: 1rem;
+  }
+  #tomdevoz .exercite .esq .principal .texto-principal {
+    margin: 31px 21px 21px 21px;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+  #tomdevoz .exercite .esq .principal .setas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 20px 52px 19px 52px;
+  }
+  #tomdevoz .exercite .dir {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 150px;
+    height: 240px;
+    font-size: 10px;
+  }
+  #tomdevoz .exercite .dir .cima {
+    background-color: var(--principal);
+    margin: 0 21px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    max-height: 106px;
+    padding: 28px 17px;
+  }
+  #tomdevoz .exercite .dir .baixo {
+    background-color: var(--principal);
+    margin: 0 21px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    max-height: 129px;
+    padding: 28px 17px;
+  }
+  #tomdevoz #sessao1 {
+    padding-top: 64px;
+    padding-bottom: 0;
+  }
+  #tomdevoz #sessao1 article .wrapper {
+    display: block;
+  }
+  #tomdevoz #sessao1 article .wrapper .esq p {
+    margin: 0;
+  }
+  #tomdevoz #sessao1 article .wrapper .dir {
+    margin-top: 64px;
+    margin-left: -35px;
+    margin-right: -35px;
+    position: relative;
+  }
+  #tomdevoz #sessao2 {
+    padding-top: 62px;
+    padding-bottom: 30px;
+  }
+  #tomdevoz #sessao2 article > p.txt--padrao40 {
+    margin-bottom: 64px;
+  }
+  #tomdevoz #sessao4 {
+    padding-bottom: 30px;
+  }
+  #tomdevoz #sessao6 {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+  #tomdevoz #sessao8 {
+    padding-top: 88px;
+  }
+  /* :Pagina Tom de Voz Mobile */
   /* Pagina Download Mobile: */
   #download p.txt--padrao40 {
     margin-bottom: 40px;

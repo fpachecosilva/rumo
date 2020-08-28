@@ -149,6 +149,8 @@ main {
 
 
 /* Menu Desktop: */
+
+
     nav {
         width: 220px;
         height: 100vh;
@@ -158,8 +160,21 @@ main {
     nav.menu {
         background-color: var(--secundaria);
         height: 100%;
-        // width: 220px;
-        // position: fixed;
+
+        
+        a.active::after { 
+            content: ''; 
+            width: 22px; 
+            height: 13px; 
+            display: block; 
+            background-color: #fff; 
+            position: absolute; 
+            left: -30px; 
+            bottom: 0;
+            top: 0;                
+        }
+
+
 
         img.logo { 
             margin: 50px auto; 
@@ -668,6 +683,78 @@ main {
 
 
 /* Pagina Paleta Desktop: */
+    .accordeon {
+        .wrapper-acc {
+            max-width: 445px;
+            height: 316px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            .box {
+                width: 60px;
+                height: 100%;
+                display: block;
+                margin-right: 20px;
+                cursor: pointer;
+                padding: 18px 25px 22px 25px;
+                box-sizing: border-box;
+                transition: all 0.2s;
+                animation: fade 0.2s linear;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                &.ativo {
+                    width: 205px;
+
+                    p {
+                        opacity: 1;
+                    }
+                }
+
+                p {
+                    display: block;
+                    color: #fff;
+                    font-size: 0.75rem;
+                    line-height: 1.25rem;
+                    opacity: 0;
+                    margin: 0!important;
+                    transition: all 0.5s;
+
+                    &.nome {
+                        font-weight: bold;
+                    }
+
+                    &.desc {
+                        position: absolute;
+                        bottom: 55px;                        
+                    }
+                }
+            }
+
+            .box1 {
+                background-color: var(--principal);
+            }
+
+            .box2 {
+                background-color: var(--secundaria);
+            }
+
+            .box3 {
+                background-color: var(--verde1);
+            }
+
+            .box4 {
+                background-color: var(--verde2);
+                
+                p {
+                    color: var(--principal);
+                }
+            }
+        }
+    }
+
     #paleta {
         .topobg {
             background-image: url(../img/paletatopo.png);
@@ -678,7 +765,7 @@ main {
             padding: 70px 0 138px 0;            
 
             .txt--padrao40 {
-                margin-bottom: 25px;
+                margin-bottom: 13px;
             }
 
             article {
@@ -720,7 +807,32 @@ main {
             }
 
             .accordeon {
-                bottom: 85px
+                bottom: 85px;
+
+                
+                .box1 {
+                    background-color: var(--amarelo);
+                    
+                    p {
+                        color: var(--principal);
+                    }
+                }
+
+                .box2{
+                    background-color: var(--laranja);
+                }
+
+                .box3 {
+                    background-color: var(--lilas);
+                }
+
+                .box4 {
+                    background-color: var(--cinza1);
+
+                    p {
+                        color: var(--principal);
+                    }
+                }
             }
         }
 
@@ -1018,6 +1130,8 @@ main {
         }
 
     }
+
+    
 /* :Pagina Paleta Desktop */
 
 
@@ -1814,7 +1928,7 @@ main {
             max-width: 607px;
 
             .nav {
-                display: inline-flex;
+                display: inline-flex!important;
                 position: relative;
                 
                 .slider {
@@ -2343,6 +2457,8 @@ main {
             position: absolute; 
             background-color: #fff; 
             border-radius: 1px;
+            transition: transform 0.6s;
+
         }
     
         #Cima {
@@ -2380,11 +2496,12 @@ main {
         .links {
             background-color: var(--secundaria);
             padding-top: 50px;
-            height: auto;
-            transform: scaleY(0);
-            width: 100%;
+            height: 0;
             z-index: 100;
-            overflow-y: auto;            
+            overflow-y: auto;
+            width: 100%;
+            opacity: 0;            
+            
             
             ul {
                 li {
@@ -2397,8 +2514,14 @@ main {
     
     .LinksAberto {       
         display: block!important;       
-        transform: scaleY(1)!important;
+        // transform: scaleY(1)!important;
         overflow-y: auto;
+        opacity: 1!important;
+        top: initial;
+        position: initial;
+        height: 100vh;
+        animation: fade 1s linear;
+        
     }
 
     .navfooter {
@@ -2427,11 +2550,25 @@ main {
     nav.menu {
         width: 100%;
         height: 66px;
+        // height: 100vh;
+        overflow-y: auto;
+        // transform: scaley(1);
+        
 
         img.logo {
             margin: 0;
             padding-top: 23px;
             padding-left: 26px;
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: normal!important;
+            line-height: 35px!important;
+
+            .home-link {
+                font-weight: normal!important;
+            }
         }
     }
 /* :Menu Mobile */    
@@ -2689,6 +2826,37 @@ main {
     }
 
     #paleta { 
+
+        .accordeon {
+            .wrapper-acc {
+                grid-template-columns: initial;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                height: 402px;
+
+                .box {
+                    width: 100%;
+                    height: 60px;
+                    margin: 0;
+                    margin-bottom: 12px;
+                    position: relative;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    &.ativo {
+                        height: 186px;
+                    }
+
+                    p {
+                        &.desc {
+                            bottom: initial;
+                            top: 85px;
+                        }
+                    }
+                }
+            }
+        }
 
         .topobg {
             background-size: 400px;
@@ -3324,6 +3492,192 @@ main {
     }
 
 /* :Pagina Iconografia Mobile */
+
+
+
+/* Pagina Tom de Voz Mobile: */
+    #tomdevoz {
+        .topobg {
+            background-size: 350px;
+            background-position-y: 30px;
+            background-position-x: 112px;
+        }
+        
+        .wrapper-abas {
+            display: block;
+
+            .esq {
+                p.verde {
+                    margin-bottom: 28px;
+                }
+            }
+
+            .dir {
+                margin-top: 62px;
+
+                ul.desktopitem {
+                    display: none!important;
+                }
+                
+                .content {
+                    border-top: 0;
+
+                    .tab {
+                        display: block;
+                        opacity: 1;
+                        padding-top: 12px;
+                        margin-bottom: 62px; 
+                        
+                        p {
+                            margin-bottom: 35px;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .tab:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .titulo {
+                        display: inline-block!important;
+                        border-bottom: 3px solid var(--principal);
+                        font-weight: bold;
+                        padding: 0 10px;
+                        padding-bottom: 7px;
+                    }
+
+                    hr {
+                        margin-top: -1px;
+                        opacity: .5;
+                    }
+                    
+                }
+            }
+        }
+
+        .exercite {
+            margin: 0 16px;
+            background-color: initial;
+            min-height: initial;
+
+            .esq {
+                .principal {
+                    height: 451px;
+                    display: block;
+                    position: relative;
+
+                    .topo {
+                        padding: 17px 21px 0 21px;
+                        margin: 0;
+                        display: flex;
+
+                        div {
+                            &:first-child {
+                                font-size: 0.625rem;
+                            }
+                        }
+
+                        .paginacao {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .texto-principal {
+                        margin: 31px 21px 21px 21px;
+                        font-size: 1.25rem;
+                        line-height: 1.625rem;
+                    }
+
+                    .setas {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: 20px 52px 19px 52px;
+                        
+                    }
+                }
+            }
+
+            .dir {
+                position: absolute;
+                left: 16px;
+                right: 16px;
+                top: 150px;
+                height: 240px;
+                font-size: 10px;
+
+                .cima {
+                    background-color: var(--principal);
+                    margin: 0 21px;
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    max-height: 106px;
+                    padding: 28px 17px;
+                }
+
+                .baixo {
+                    background-color: var(--principal);
+                    margin: 0 21px;
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    max-height: 129px;
+                    padding: 28px 17px;
+                }
+            }
+        }
+
+        #sessao1 {
+            padding-top: 64px;
+            padding-bottom: 0;
+
+            article {
+                .wrapper {
+                    display: block;
+
+                    .esq {
+                        p {
+                            margin: 0;
+                        }
+                    }
+
+                    .dir {
+                        margin-top: 64px;
+                        margin-left: -35px;
+                        margin-right: -35px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+        #sessao2 {
+            padding-top: 62px;
+            padding-bottom: 30px;
+            
+            article {
+                > p.txt--padrao40 {
+                    margin-bottom: 64px;
+                }
+
+            }
+            
+        }
+
+        #sessao4 {
+            padding-bottom: 30px;
+        }
+
+        #sessao6 {
+            padding-top: 45px;
+            padding-bottom: 30px;
+        }
+
+        #sessao8 {
+            padding-top: 88px;
+        }
+    }
+/* :Pagina Tom de Voz Mobile */
 
 
 /* Pagina Download Mobile: */

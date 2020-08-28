@@ -99,7 +99,7 @@ jQuery(document).ready(function() {
 			$('li').hide();
 
 			$(this).addClass('active');			
-			window.location.href = ($(this).attr('href'));			
+			window.location.href = ($(this).attr('href'));
 		})
 
 		// Muda botao
@@ -405,6 +405,16 @@ jQuery(document).ready(function() {
 		}
 
 
+		// Accordeon		
+		$('.wrapper-acc .box').click(function() {
+			
+			$(this).addClass('ativo');
+			$(this).siblings().removeClass('ativo');
+
+			
+		})
+
+
 	// Funções executadas apenas na versão Desktop:
 		function DesktopVersion() {
             
@@ -463,6 +473,9 @@ jQuery(document).ready(function() {
 
 					$(this).removeClass('MenuAberto');
 					$('.links').removeClass('LinksAberto');
+
+					$('.menu').css('height','66px');
+					$('nav .links').css('height','0');					
 					
 					
 				} else {
@@ -470,9 +483,17 @@ jQuery(document).ready(function() {
 					$(this).addClass('MenuAberto');
 					$('.links').addClass('LinksAberto');
 					
+					$('.menu').css('height','100vh');
+					$('nav .links').css('height','100vh');
 					
 				}
 			});
+
+			$('nav li a').click(function(){
+				$('.menu').css('height','66px');
+			})
+
+			
 
 		}
 	// :Funções executadas apenas na versão Mobile
