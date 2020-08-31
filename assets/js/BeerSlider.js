@@ -2512,13 +2512,14 @@ var BeerSlider = exports.BeerSlider = function () {
                 _this2.setImgWidth();
             });
         }
-    }, {
-        key: 'move',
-        value: function move() {
-            this.revealContainer.style.width = this.range.value + '%';
-            this.handle.style.left = this.range.value + '%';
-            this.range.setAttribute('aria-valuenow', this.range.value);
-        }
+    }, 
+      {
+        // key: 'move',
+        // value: function move() {
+        //     this.revealContainer.style.width = this.range.value + '%';
+        //     this.handle.style.left = this.range.value + '%';
+        //     this.range.setAttribute('aria-valuenow', this.range.value);
+        // }
     }]);
 
     return BeerSlider;

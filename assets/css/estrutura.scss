@@ -143,14 +143,11 @@ main {
     }
 
 }
-
 /* :Elementos Desktop */
 
 
 
 /* Menu Desktop: */
-
-
     nav {
         width: 220px;
         height: 100vh;
@@ -340,8 +337,154 @@ main {
 
 
 
+/* Topo Desktop: */
+    .topobg {
+        animation-name: topobg;
+        animation-duration: 1.5s;
+    }    
+
+
+    #topo {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 10;
+        overflow: hidden;
+        background-color: #fff;
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .blocotopo {
+            background-color: #fff;
+            width: 764px;
+            margin-left: 95px;
+            position: absolute;
+            top: 0;
+            padding: 100px 0 0 65px;
+            
+            
+
+            .wrapper {
+                margin-top: 145px;
+
+                img {
+                    float: left;
+                }
+
+                a {
+                    float: right;
+                    width: 76px;
+                    height: 43px;
+                    background-color: #fff;
+                    border: 1px solid var(--principal);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--principal);
+                    font-weight: bold;
+                    margin-bottom: 85px;
+                    margin-right: 60px;
+                    position: relative;
+                    z-index: 0;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: scaleY(0);
+                        transform-origin: bottom center;
+                        background-color: var(--principal)!important;
+                        z-index: -1;
+                        transition: transform 0.3s;
+                    }
+                    
+                    &:hover {
+                        color: #fff;
+                        &:after {
+                            transform: scaleY(1);
+                            
+                        }                        
+                    }
+                }
+            }
+
+            p.menor {
+                font-size: 14px;
+                text-transform: uppercase;                
+            }
+
+            p.maior {
+                font-size: 80px;
+                line-height: 80px;
+                font-weight: bold;
+            }
+
+            p.rodape {
+                font-size: 10px;
+                float: right;
+                clear: both;
+                margin-bottom: 22px;
+                margin-right: 19px;
+            }
+            
+        }
+
+        .toporodape {
+            width: 100%;
+            height: 124px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            
+
+            p {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                width: 60px;
+                margin-left: -30px;
+                bottom: 67px;                
+                left: 50%;
+                position: absolute;
+                display: none;
+            }
+
+            span {
+                width: 1px;
+                height: 45px;
+                display: block;
+                background-color: var(--principal);
+                margin: auto;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                display: none;
+            }
+        }
+
+        p.rodapemobile {
+            display: none;
+        }
+
+    }
+/* :Topo Desktop */
+
+
+
+
 /* Pagina Logotipo Desktop: */
     #logotipo {
+
+        main {
+            margin-top: 100vh;
+        }
+
         p.txt--padrao12 {
             max-width: 570px;
         }
@@ -698,8 +841,9 @@ main {
                 cursor: pointer;
                 padding: 18px 25px 22px 25px;
                 box-sizing: border-box;
-                transition: all 0.2s;
-                animation: fade 0.2s linear;
+                transition: all 0.4s;
+                animation: fade 0.4s linear;
+                overflow: hidden;
 
                 &:last-of-type {
                     margin-right: 0;
@@ -720,7 +864,7 @@ main {
                     line-height: 1.25rem;
                     opacity: 0;
                     margin: 0!important;
-                    transition: all 0.5s;
+                    transition: all 0.2s;
 
                     &.nome {
                         font-weight: bold;
@@ -837,12 +981,16 @@ main {
         }
 
         #sessao3 {
+            padding-top: 60px;
+
             img {
                 margin: 70px auto;
             }
         }
 
         #sessao4 {
+            padding-top: 60px;
+
             margin-top: 43px;
 
             .txt--padrao40 {
@@ -1386,7 +1534,7 @@ main {
 
         #sessao1 {
             padding-top: 90px;
-            padding-bottom: 72px;
+            // padding-bottom: 72px;
 
             article {
 
@@ -1434,9 +1582,18 @@ main {
                 }
                 
             }
+
+            #videogrid {
+                max-width: 405px;
+                cursor: pointer;
+                margin-left: -30px;
+                margin-top: -50px;          
+            }
+
         }
 
         #sessao2 {
+            padding-top: 70px;
             margin-bottom: 70px;
 
             .image-slider {
@@ -1747,10 +1904,44 @@ main {
             }
 
             .baixo {
-                margin-top: 90px;
+                margin-top: 90px;                
+
+                .pelicula {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #0000007a;
+                    cursor: pointer;
+                    width: 100%;
+                    height: calc(100% - 8px);
+                    z-index: 5;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:after {
+                        content: url('../img/play.svg');
+
+                    }
+                }
+
+                .videowrapper {
+                    width: 100%;
+                    
+                }
+                
+                video {
+                    width: 100%;
+                    max-width:100%;
+                }
+                
 
                 div {
                     margin-right: 90px;
+                    position: relative;
 
                     p {
                         margin-top: 10px;
@@ -1773,10 +1964,12 @@ main {
         }
 
         #sessao1 {
+            padding-top: 78px;            
             
             article {
                 p.topo {
-                    margin: 78px 0 70px 0;
+                    // margin: 78px 0 70px 0;
+                    margin-bottom: 70px;
                 }
     
             }
@@ -1793,6 +1986,13 @@ main {
                     }
                 }
             }
+
+            .wrapper-slider {
+                img {
+                    width: 300px;
+                }
+            }
+
         }
 
         #sessao3 {
@@ -2216,6 +2416,8 @@ main {
 
 
 
+
+
 /* Pagina Download Desktop: */
     #download {
 
@@ -2437,6 +2639,77 @@ main {
 /* :Elementos Mobile */
 
 
+/* Topo Mobile: */
+    #topo {
+        position: relative;
+        background-image: url('../img/topobg-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center top;        
+
+        .blocotopo {
+            margin: 0 20px;
+            height: 428px;
+            padding: 0;
+            width: calc(100% - 40px);            
+            // position: relative;
+            box-sizing: border-box;
+            padding-top: 50px;
+            padding-left: 17px;
+
+            .wrapper {
+                margin-top: 70px;
+
+                img {
+                    max-width: 112px;
+                }
+
+                a {
+                    position: absolute;
+                    margin: 0;
+                    bottom: 20px;
+                    right: 25px;
+                }
+            }
+
+            p {
+
+                &.menor {
+                    max-width: 170px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+
+                &.maior {
+                    max-width: 224px;
+                    font-size: 38px;
+                    line-height: 38px;
+                    margin-top: 15px;
+                }
+
+            }
+
+
+        }
+
+        p.rodapemobile {
+            font-size: 10px;
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+        }
+
+        .toporodape {
+            height: 85px;
+
+            p {
+                bottom: 50px;
+            }
+        }
+    }
+/* :Topo Mobile */
+
+
+
 /* Menu Mobile: */
     #abrirmenu {
         width: 43px;
@@ -2590,6 +2863,11 @@ main {
 
 /* Pagina Logotipo Mobile: */
     #logotipo {
+
+        main {
+            margin-top: initial;
+        }
+
         p.txt--padrao40 {
             margin-bottom: 27px;
         }
@@ -2832,6 +3110,7 @@ main {
                 grid-template-columns: initial;
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 height: 402px;
+                overflow: hidden;
 
                 .box {
                     width: 100%;
@@ -2839,6 +3118,7 @@ main {
                     margin: 0;
                     margin-bottom: 12px;
                     position: relative;
+                    overflow: hidden;
 
                     &:last-of-type {
                         margin-bottom: 0;
@@ -3179,6 +3459,19 @@ main {
                 margin-bottom: 65px;
             }
         }
+
+        .videogrid {
+            margin: 0 -15px;
+
+            p {
+                margin: 0 15px;
+            }
+        }
+                
+        #videogrid {
+            max-width: 100%!important;
+            margin: auto!important;            
+        }
     }
 
 /* :Pagina Grid Mobile */
@@ -3421,11 +3714,9 @@ main {
             .baixo {
                 margin-top: 45px;
 
-                div {
+                div:not(.videowrapper) {
                     margin: 0;
                     margin-bottom: 85px;
-                    margin-left: -15px;
-                    margin-right: -15px;
 
                     &:last-child {
                         margin-bottom: 0;
@@ -3723,13 +4014,47 @@ main {
             justify-content: center;
         }
     }
-
 /* :Footer Mobile */
 
 }
 
 
+/* Beer Slider: */
+    .beer-handle {
+        border: 0!important;
+        width: 32px!important;
+        height: 32px!important;
 
+        &:before {
+            width: 8px!important;
+            height: 8px!important;
+            left: 6px!important;
+        }
+
+        &:after {
+            width: 8px!important;
+            height: 8px!important;
+            right: -3px!important;
+        }
+
+        .risco {
+            width: 3px;
+            height: 100%;
+            background: var(--principal);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+
+    .wrapper-slider {    
+        cursor: pointer;
+        z-index: 20;
+    }
+/* :Beer Slider */
 
 
 

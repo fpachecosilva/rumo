@@ -59,9 +59,9 @@
             
             <div class="links">
             
-                <a class="home-link" href="index.html">DNA Rumo</a>
+                <a class="home-link" href="javascript:function() { return false; }">DNA Rumo</a>
                 <ul>
-                    <a class="link-abre" href="index.html">Logo</a>
+                    <a class="link-abre " href="index.html">Logo</a>
                     <li>
                         <a href="#sessao1">Descrição</a>
                     </li>
@@ -101,10 +101,10 @@
                         <a href="#sessao1">Diretrizes</a>
                     </li>
                     <li>
-                        <a href="#sessao2">Hierarquia</a>
+                        <a href="#sessao3">Hierarquia</a>
                     </li>
                     <li>
-                        <a href="#sessao3">Tipografia de sistema</a>
+                        <a href="#sessao4">Tipografia de sistema</a>
                     </li>            
                 </ul>
         
@@ -121,16 +121,16 @@
                 <ul>
                     <a class="link-abre" href="grafismos.html">Grafismos</a>
                     <li>
-                        <a href="#sessao1">Módulos</a>
+                        <a href="#sessao2">Módulos</a>
                     </li>
                     <li>
-                        <a href="#sessao2">Proporção</a>
+                        <a href="#sessao3">Proporção</a>
                     </li>
                     <li>
-                        <a href="#sessao3">Variações</a>
+                        <a href="#sessao7">Variações</a>
                     </li>            
                     <li>
-                        <a href="#sessao4">Motion</a>
+                        <a href="#sessao10">Motion</a>
                     </li>            
                 </ul>
         
@@ -140,20 +140,30 @@
                         <a href="#sessao1">Construção</a>
                     </li>
                     <li>
+                        <a href="#sessao3">Cores</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <a class="link-abre" href="javascript:function() { return false; }">Ilustração</a>
+                    <li>
+                        <a href="#sessao1">Diretrtizes</a>
+                    </li>
+                    <li>
                         <a href="#sessao2">Cores</a>
                     </li>
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="estilofotografico.html">Estilo Fotográfico</a>            
+                    <a class="link-abre" href="javascript:function() { return false; }">Estilo Fotográfico</a>            
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="exemplosdeaplicacoes.html">Exemplos de aplicações</a>            
+                    <a class="link-abre" href="javascript:function() { return false; }">Exemplos de aplicações</a>            
                 </ul>
                 
                 <ul>
-                    <a class="link-abre" href="ambientacao.html">Ambientação</a>            
+                    <a class="link-abre" href="javascript:function() { return false; }">Ambientação</a>            
                 </ul>
                 <a class="tomdevoz" href="tomdevoz.html">Tom de Voz</a>
 
@@ -212,8 +222,10 @@
 
                     <div class="grid--2colunas">
 
-                        <!-- FAZER O EFEITO AQUI -->
-                        <img src="assets/img/grid-sessao1-03.png" alt="">
+                        <div class="videogrid">
+                            <video id='videogrid' src="assets/video/Rumo_Grid_03.mp4" preload="auto" type="video/mp4"></video>
+                            <p class="txt--padrao12">Clique na imagem para ver outras variações.</p>
+                        </div>
 
 
                         <div class="wrapper-dir">
@@ -223,7 +235,7 @@
                                 com textos e fotos. Sempre garantindo espaço com respiro para o logo.
                             </p>
 
-                            <p>Clique na imagem para ver outras variações.</p>
+                            
                         </div>
                     </div>
                 </article>
@@ -233,17 +245,21 @@
                <article>
                     <p class="txt--padrao20">Aplicação do Grid</p>
                     
-                    <div class="image-slider">
+                    <div class="wrapper-slider" estagio="inicial" inicial="8%" final="100%">
 
-                        <div id="beer-slider" class="beer-slider" data-beer-label="before">
-                            <img src="assets/img/grid-sessao2-02.png" alt="">
-                            
-                            
-                            <div class="beer-reveal" data-beer-label="after">    
-                                <img src="assets/img/grid-sessao2-01.png" alt="">                            
+                        <div class="image-slider">
+    
+                            <div id="beer-slider" class="beer-slider" data-beer-label="before">
+                                <img src="assets/img/grid-sessao2-02.png" alt="">
+                                
+                                
+                                <div class="beer-reveal" data-beer-label="after">    
+                                    <img src="assets/img/grid-sessao2-01.png" alt="">                            
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                    </div>                    
 
                     <p class="txt--padrao12 desktopitem">Veja o grid de construção das peças exemplo acima.</p>
 
@@ -288,7 +304,8 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/BeerSlider.js"></script>
     <script>
-        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: -1 } );
+        var inicial = $('.wrapper-slider').attr('inicial');
+        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: inicial } );
     </script>
 
 </body>

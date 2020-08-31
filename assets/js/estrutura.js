@@ -57,29 +57,10 @@ jQuery(document).ready(function() {
 				$('.Android').remove();
 			}
 		}getMobileOperatingSystem();
-	// :Verificando Android ou IOS
-
-	// GoogleMaps:
-		// var position = [-23.5538037, -46.5431809];
-
-		// function showGoogleMaps() {
-		// 	var latLng = new google.maps.LatLng(position[0], position[1]);		
-		// 	var mapOptions = { 
-		// 		zoom: 16, 
-		// 		streetViewControl: false, 
-		// 		scaleControl: false, 
-		// 		zoomControl: false, 
-		// 		mapTypeId: google.maps.MapTypeId.ROADMAP, center: latLng 
-		// 	};
-		// 	map = new google.maps.Map(document.getElementById('GoogleMaps'), mapOptions);
-		// 	marker = new google.maps.Marker({ position: latLng, map: map, draggable: false, animation: google.maps.Animation.DROP });
-		// }
-
-		// google.maps.event.addDomListener(window, 'load', showGoogleMaps);
-	// :GoogleMaps
+	// :Verificando Android ou IOS	
 
 		
-		// Scroll suave
+	// Scroll suave
 		$('nav a[href^="#"]').on('click', function(e) {
 			e.preventDefault();
 			var id = $(this).attr('href'),
@@ -89,20 +70,109 @@ jQuery(document).ready(function() {
 			  scrollTop: targetOffset
 			}, 500);
 		  });
+
+
+	// Trava Scroll se for home
+		$(document).ready(function(){
+			if($('body').prop('id')=='logotipo')
+			{
+				$('html, body').css({
+					overflow: 'hidden',
+					height: '100%'
+				});
+			}
+		})
+	
+
+		  
+	// Play Video Topo
+		$(function() {
+			var video = $('#videotopo')[0];
+			$('.blocotopo a').click(function(e) {				
+				e.preventDefault();
+				video.play()
+
+				$('html, body').css({
+					overflow: 'auto',
+					height: 'auto'					
+				});
+
+				$('.blocotopo').addClass('topobg');
+
+				setTimeout(
+					function() 
+					{ 
+						$('.toporodape p').fadeIn('slow');
+						$('.toporodape span').fadeIn('slow');
+						$('.blocotopo').removeClass('topobg');
+					}, 1200);
+
+			});
+		});
+
+	// Play Video Grid
+		$(function() {
+			var video = $('#videogrid')[0];
+			$(video).click(function(e) {				
+				e.preventDefault();
+				video.play();
+			});
+		});
+
+
+
+	// Play Grafismos 1
+	$(function() {
+		// var video = $('#grafismos2')[0];
+		var video = $('#grafismos1')[0];
+		
+		$(video).siblings('.pelicula').click(function(e) {
+			e.preventDefault();
+			video.play()
+
+			$(this).fadeOut();
+
+			video.addEventListener('ended', function () {
+				$(video).siblings('.pelicula').fadeIn();
+			  },false);
+
+		});
+	});
+
+	// Play Grafismos 2
+		$(function() {
+			// var video = $('#grafismos2')[0];
+			var video = $('#grafismos2')[0];
+			
+			$(video).siblings('.pelicula').click(function(e) {
+				e.preventDefault();
+				video.play()
+
+				$(this).fadeOut();
+
+				video.addEventListener('ended', function () {
+					$(video).siblings('.pelicula').fadeIn();
+				  },false);
+
+			});
+		});
+
+
+	// Controle do ver mais
+		$(document).scroll(function() { 
+			if($(window).scrollTop() === 0) {
+				$('.toporodape p').fadeIn();
+				$('.toporodape span').fadeIn();
+			} else {
+				$('.toporodape p').fadeOut();
+				$('.toporodape span').fadeOut();
+			}
+		});
 		  
 
-		// Navegacao Menu		
-		$('.link-abre').click(function(event) {
-						
-			event.preventDefault();
-			$('.link-abre').removeClass('active')
-			$('li').hide();
+	
 
-			$(this).addClass('active');			
-			window.location.href = ($(this).attr('href'));
-		})
-
-		// Muda botao
+	// Muda botao
 		$.fn.rotateClass = function(cls1, cls2, cls3) {
 			if ($(this).hasClass(cls1)) {
 				return $(this).removeClass(cls1).addClass(cls2);
@@ -123,7 +193,7 @@ jQuery(document).ready(function() {
 		});
 
 
-		// Exercite o tom de voz Sessao3
+	// Exercite o tom de voz Sessao3
 		$(document).ready( function() {
 			
 			var total = $('#sessao3 .cima span').length;
@@ -197,7 +267,7 @@ jQuery(document).ready(function() {
 				}
 			})
 
-			// Controle de cores
+		// Controle de cores
 			$('#sessao3 .cima').click(function(){
 				$('#sessao3 .exercite').removeClass('certo')
 				$('#sessao3 .exercite').toggleClass('errado')				
@@ -214,7 +284,7 @@ jQuery(document).ready(function() {
 
 		})
 
-		// Exercite o tom de voz Sessao5
+	// Exercite o tom de voz Sessao5
 		$(document).ready( function() {
 			
 			var total = $('#sessao5 .cima span').length;
@@ -288,7 +358,7 @@ jQuery(document).ready(function() {
 				}
 			})
 
-			// Controle de cores
+		// Controle de cores
 			$('#sessao5 .cima').click(function(){
 				$('#sessao5 .exercite').removeClass('certo')
 				$('#sessao5 .exercite').toggleClass('errado')				
@@ -305,7 +375,7 @@ jQuery(document).ready(function() {
 
 		})
 
-		// Exercite o tom de voz Sessao7
+	// Exercite o tom de voz Sessao7
 		$(document).ready( function() {
 			
 			var total = $('#sessao7 .cima span').length;
@@ -395,9 +465,39 @@ jQuery(document).ready(function() {
 			})
 
 		})
+
+	// Beer Slider		
+		window.onload = (function(){
+			var altura = $('.image-slider').height()+'px';
+			
+			$('.beer-handle').append('<div class="risco"></div>');
+			$('.risco').css('height', altura);
+
+			var inicial = $('.wrapper-slider').attr('inicial');
+			$('.beer-reveal').css('width', inicial)
+			$('.beer-handle').css('left', inicial)
+
+		})
+
+		
+		$(".wrapper-slider").click(function(){		
+			var inicial = $(this).attr('inicial');
+			var final = $(this).attr('final');
+
+			if ( $(this).attr('estagio') == 'final' ) {					
+					$(".beer-handle").animate({left:inicial}, 300)
+					$(".beer-reveal").animate({width:inicial}, 300)
+					$(this).attr('estagio','inicial');
+				} else {
+					$(".beer-handle").animate({left:final}, 300)
+					$(".beer-reveal").animate({width:final}, 300)
+					$(this).attr('estagio','final');
+				}
+		})
+
 		
 
-		// Controle de abertura do menu
+	// Controle de abertura do menu
 		document.onload = showMenu();
 
 		function showMenu() {			
@@ -406,14 +506,11 @@ jQuery(document).ready(function() {
 
 
 		// Accordeon		
-		$('.wrapper-acc .box').click(function() {
-			
+		$('.wrapper-acc .box').click(function() {			
 			$(this).addClass('ativo');
 			$(this).siblings().removeClass('ativo');
-
-			
 		})
-
+		
 
 	// Funções executadas apenas na versão Desktop:
 		function DesktopVersion() {
@@ -459,6 +556,21 @@ jQuery(document).ready(function() {
 				$('#sessao6 .slider-bar').width(size + 20)
 				$('#sessao6 .slider-bar').css('margin-left',pos)	
 			})
+
+
+
+			// Navegacao Menu		
+			$('.link-abre').click(function(event) {
+							
+				event.preventDefault();
+				$('.link-abre').removeClass('active')
+				$('li').hide();
+
+				$(this).addClass('active');			
+				window.location.href = ($(this).attr('href'));
+			})
+
+
 		}
 	// :Funções executadas apenas na versão Desktop
 
@@ -492,6 +604,17 @@ jQuery(document).ready(function() {
 			$('nav li a').click(function(){
 				$('.menu').css('height','66px');
 			})
+			
+
+			$('#topo a').click(function(){				
+				$(this).fadeOut();
+				$('.rodapemobile').fadeOut();
+				$('.blocotopo').css('height','385px')
+				$('.blocotopo').css('margin-top','40px')
+				$('#topo').css('z-index','0');
+			})
+
+			
 
 			
 

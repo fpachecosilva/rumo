@@ -42,7 +42,7 @@
 /* Seleção: */
 
 /* Efeitos de transição: */
-a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links, .LinksAberto, nav.links {
+a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links, .LinksAberto, nav.links, #topo, .blocotopo {
     -webkit-transition: all var(--tempo);
     -moz-transition: all var(--tempo);
     -ms-transition: all var(--tempo);
@@ -147,6 +147,8 @@ a, ul, li, .link-abre, nav, .menu, section, .destaque-ideia, #abrirmenu, .links,
 .op20 {
     opacity: 0.2;
 }
+
+@keyframes topobg { 0% {background-color: #fff;} 50% {background-color: #ffffffc2;} 100% {background-color: #fff;} }
 
 
 @media screen and (max-width: 900px) {
