@@ -73,15 +73,15 @@ jQuery(document).ready(function() {
 
 
 	// Trava Scroll se for home
-		$(document).ready(function(){
-			if($('body').prop('id')=='logotipo')
-			{
-				$('html, body').css({
-					overflow: 'hidden',
-					height: '100%'
-				});
-			}
-		})
+		// $(document).ready(function(){
+		// 	if($('body').prop('id')=='logotipo')
+		// 	{
+		// 		$('html, body').css({
+		// 			overflow: 'hidden',
+		// 			height: '100%'
+		// 		});
+		// 	}
+		// })
 
 		$('#botaodotopo').click(function(){
 			$(this).css('opacity','0')

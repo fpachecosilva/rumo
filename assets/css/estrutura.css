@@ -854,7 +854,7 @@ header.logotipo {
   padding-top: 57px;
 }
 
-#logotipo #sessao6 p {
+#logotipo #sessao6 p:not(.txt--padrao40) {
   margin-bottom: 57px;
 }
 
@@ -1245,6 +1245,14 @@ header.logotipo {
 
 #paleta #sessao3 {
   padding-top: 60px;
+}
+
+#paleta #sessao3 p.txt--padrao40 {
+  margin-bottom: 20px;
+}
+
+#paleta #sessao3 p.txt--padrao12 {
+  max-width: 570px;
 }
 
 #paleta #sessao3 img {
@@ -2254,6 +2262,15 @@ header.logotipo {
 #iconografia #sessao3 img {
   margin: 50px auto 0 auto;
   max-width: 893.5px;
+}
+
+#iconografia #sessao3 .ideia {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+#iconografia #sessao3 .ideia:hover .destaque-ideia {
+  width: 790px;
 }
 
 #iconografia #sessao4 img {
@@ -3641,6 +3658,12 @@ footer .trademark p {
   #iconografia #sessao3 img {
     margin-top: 30px;
     max-width: 100%;
+  }
+  #iconografia #sessao3 .ideia .destaque-ideia {
+    height: 147px;
+  }
+  #iconografia #sessao3 .ideia .destaque-ideia:before {
+    position: initial;
   }
   #iconografia #sessao4 {
     overflow-x: auto;

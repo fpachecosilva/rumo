@@ -629,7 +629,7 @@ main {
     #logotipo #sessao6 {
         padding-top: 57px;
 
-        p {
+        p:not(.txt--padrao40) {
             margin-bottom: 57px;
         }
 
@@ -1044,10 +1044,20 @@ main {
         #sessao3 {
             padding-top: 60px;
 
+            p {
+                &.txt--padrao40 {
+                    margin-bottom: 20px;
+                }
+                &.txt--padrao12 {
+                    max-width: 570px;
+                }
+            }
+
             img {
                 margin: 70px auto;
                 max-width: 387.5px;
             }
+            
         }
 
         #sessao4 {
@@ -2149,6 +2159,20 @@ main {
             img {
                 margin: 50px auto 0 auto;
                 max-width: 893.5px;
+            }
+
+            
+            .ideia {
+                margin-top: 50px;
+                margin-bottom: 0;
+                
+
+                &:hover {
+                    .destaque-ideia {
+                        width: 790px;                        
+                    }
+
+                }
             }
         }
 
@@ -3964,6 +3988,16 @@ main {
             img {
                 margin-top: 30px;
                 max-width: 100%;
+            }
+
+            .ideia {
+                .destaque-ideia {
+                    height: 147px;
+
+                    &:before {
+                        position: initial;
+                    }
+                }
             }
         }
 
