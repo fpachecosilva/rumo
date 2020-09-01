@@ -152,11 +152,14 @@ main {
         width: 220px;
         height: 100vh;
         position: fixed;
+        z-index: 9;
     }
 
     nav.menu {
         background-color: var(--secundaria);
         height: 100%;
+        box-shadow: 6px 0px 8px #0000000F;
+
 
         
         a.active::after { 
@@ -502,7 +505,8 @@ main {
     }
 
     header.logotipo {
-        background-image: url('../img/logotipo-white.png');
+        background-image: url('../img/Rumo_logo_banner.png');
+        background-size: cover;
     }
 
     #logotipo #sessao1 { 
@@ -582,6 +586,10 @@ main {
             display: grid;
             justify-content: center;
             margin-top: 110px;
+
+            img {
+                width: 334px;
+            }
             
             p {
                 font-family: 'Cera Pro';
@@ -694,14 +702,62 @@ main {
                 .imgsub {                    
                     margin-top: 35px;
                     margin-bottom: 28px;
+
+                    &:nth-child(2) {
+                        margin-top: 100px;
+                        width: 355px
+                    }
+
+                    &:nth-child(3) {
+                        width: 172px;
+                    }
+
+                    &:nth-child(4) {
+                        width: 174px;
+                    }
                 }
 
-                .imgflyer {                              
+                .imgflyer {
                     margin-top: 65px;
                     margin-bottom: 53px;
 
                     img {
-                        // margin: auto;
+                        
+                        &:first-of-type {
+                            max-width: 591.5px;
+                            float:left;
+                        }
+
+                        &.dir {
+                            max-width: 347.5px;
+                        }
+                    }
+
+                    p {
+                        margin-left: 53px;
+                        max-width: 176px;
+                        display: inline-block;
+                        font-size: 12px;
+                        line-height: 14px;
+
+                       
+                        &:nth-of-type(1) {
+                           margin-top: -50px;
+                           margin-bottom: 65px;
+                        }
+
+                        &:nth-of-type(2) {
+                            margin-bottom: 125px;
+                         }
+
+                         &:nth-of-type(3) {
+                            margin-bottom: 120px;
+                         }
+
+                         &:nth-of-type(4) {
+                            margin-bottom: 85px;
+                         }
+
                     }
 
                     .dir {                        
@@ -743,8 +799,9 @@ main {
                 }
 
                 .imgsub { 
-                    margin-top: 60px;
+                    margin-top: 60px;                    
                 }
+                
 
                 .imgflyer {
                     margin-top: 150px
@@ -754,14 +811,17 @@ main {
 
             .dir1 {
                 margin: 10px 0;
+                width: 146px;
             }
 
             .dir2 {
                 margin-top: 15px;
+                width: 317px;
             }
 
             .dir3 {
                 margin-top: 38px;
+                width: 318px;
             }
 
             .dir4 {
@@ -901,8 +961,9 @@ main {
 
     #paleta {
         .topobg {
-            background-image: url(../img/paletatopo.png);
-            background-position: right 45px center;            
+            background-image: url(../img/Rumo_Cores_Banner.png);
+            // background-position: right 45px center;   
+            background-size: cover;         
         }
 
         #sessao1, #sessao2 {
@@ -985,6 +1046,7 @@ main {
 
             img {
                 margin: 70px auto;
+                max-width: 387.5px;
             }
         }
 
@@ -1291,8 +1353,9 @@ main {
         }
 
         .topobg {
-            background-image: url(../img/tipografiatopo.png);
-            background-position: right 65px center;            
+            background-image: url(../img/Rumo_Tipografia_Banner.png);
+            // background-position: right 65px center;  
+            background-size: cover;          
         }
 
         #sessao1 {
@@ -1437,6 +1500,7 @@ main {
 
             img {
                 margin-top: 120px;
+                max-width: 553.5px;
             }
         }
 
@@ -1528,8 +1592,9 @@ main {
 
     #grid {
         .topobg {
-            background-image: url(../img/gridtopo.png);
-            background-position: right bottom;
+            background-image: url(../img/Rumo_Grid_banner.png);
+            // background-position: right bottom;
+            background-size: cover;
         }
 
         #sessao1 {
@@ -1544,6 +1609,10 @@ main {
                     &:nth-child(1) {
                         margin-bottom: 162px;
 
+                        img {
+                            width: 430px;
+                        }
+
                         .wrapper-dir {
                             max-width: 412px;
                         }
@@ -1551,6 +1620,11 @@ main {
 
                     &:nth-child(2) {
                         margin-bottom: 145px;
+
+                        img {
+                            width: 430px;
+                            margin-top: -80px;
+                        }
 
                         .wrapper-dir {
                             max-width: 352px;
@@ -1584,8 +1658,8 @@ main {
             }
 
             #videogrid {
-                max-width: 405px;
-                cursor: pointer;
+                max-width: 480px;
+                // cursor: pointer;
                 margin-left: -30px;
                 margin-top: -50px;          
             }
@@ -1616,9 +1690,10 @@ main {
     #grafismos {
 
         .topobg {
-            background-image: url(../img/grafismostopo.png);
+            background-image: url(../img/Rumo_Grafismo_Banner.png);
             background-color: #56A4E0;
-            background-position: right center;
+            // background-position: right center;
+            background-size: cover;
         }
 
         #sessao1 {
@@ -1673,8 +1748,7 @@ main {
 
             .first {
                 margin: 40px auto 135px auto;
-                // margin-top: 40px;
-                // margin-bottom: 135px;
+                width: 438px;
             }
 
             .boxes1 {
@@ -1687,10 +1761,36 @@ main {
                 p {
                     max-width: 116px;
                     display: block;
+                }
 
-                    &:first-child {
-                        margin-left: 20px;
+                div {
+                    &:nth-child(1) {
+                        p {
+                            margin-left: 35px;
+                        }
                     }
+
+                    &:nth-child(3) {
+                        p {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        p {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        p {
+                            margin-left: 35px;
+                        }
+                    }
+                }
+
+                img:not(.seta) {
+                    width: 182px;
                 }
             }
 
@@ -1707,11 +1807,17 @@ main {
 
                     > div {
                         margin: 0 25px;
+                        position: relative;
+                    }
+
+                    img:not(.bg) {
+                        width: 111px;
                     }
 
                     img.bg {                        
                         position: absolute;
                         bottom: 57px;
+                        z-index: -1;
                     }
 
                     p {
@@ -1740,11 +1846,25 @@ main {
 
                 .cima {
                     align-self: end;
+
+                    img {
+                        width: 111px;
+                    }
                 }
 
                 .baixo {
                     align-self: flex-start;
                     margin-top: 42px;
+
+                    img {
+                        width: 329px;
+                    }
+                }
+
+                .dir {
+                    img {
+                        width: 438px;
+                    }
                 }
             }
         }
@@ -1788,7 +1908,7 @@ main {
             padding-top: 40px;
 
             &:hover {
-                cursor: pointer;
+                // cursor: pointer;
                 user-select: none;
             }
 
@@ -1810,6 +1930,17 @@ main {
 
                     div:first-of-type {
                         margin-right: 35px;
+
+                        img {
+                            width: 317px;
+                        }
+                    }
+
+                    div:last-of-type {                        
+
+                        img {
+                            width: 152px;
+                        }
                     }
                 }
 
@@ -1819,7 +1950,8 @@ main {
                     justify-content: center;
 
                     img {
-                        opacity: 0;
+                        padding: 50px;
+                        box-sizing: border-box;
                     }
                 }
 
@@ -1878,6 +2010,10 @@ main {
                     }
                     
                 }
+
+                img {
+                    width: 357px;
+                }
             }
         }
 
@@ -1888,7 +2024,7 @@ main {
         }
 
         #sessao10 {
-            padding: 120px 0 227px 0;
+            padding: 120px 0 93px 0;
             background-color: var(--bgcinza);
 
             article {
@@ -1900,6 +2036,10 @@ main {
 
                 p {
                     margin-top: 45px;
+                }
+
+                img {
+                    margin: auto;
                 }
             }
 
@@ -1930,6 +2070,7 @@ main {
 
                 .videowrapper {
                     width: 100%;
+                    z-index: 0;
                     
                 }
                 
@@ -1959,8 +2100,9 @@ main {
 
     #iconografia {
         .topobg {
-            background-image: url(../img/iconografiatopo.png);
-            background-position-x: left;
+            background-image: url(../img/Rumo_Iconografia_Banner.png);
+            // background-position-x: left;
+            background-size: cover;
         }
 
         #sessao1 {
@@ -1984,6 +2126,12 @@ main {
                     p {
                         margin-bottom: 40px;
                     }
+
+                    &:last-of-type {
+                        img {
+                            max-width: 456px;
+                        }
+                    }
                 }
             }
 
@@ -2000,6 +2148,7 @@ main {
 
             img {
                 margin: 50px auto 0 auto;
+                max-width: 893.5px;
             }
         }
 
@@ -2880,8 +3029,8 @@ main {
         }
 
         .logotipo {
-            background-size: 245px;
-            background-position-x: 35px;
+            background-size: 676px;
+            // background-position-x: 35px;
         }
 
         #sessao1 {
@@ -3031,10 +3180,29 @@ main {
 
                     .imgflyer {
 
+                        img {
+                            width: 100%;
+
+                            &.dir {
+                                margin-bottom: 70px;
+                            }
+                        }
+
+
+
                         margin-bottom: 0;
 
                         p {
+                            font-size: 16px;
+                            line-height: 26px;
                             margin-top: 41px;
+                            margin-left: 0;
+                            margin-bottom: 0!important;
+                            max-width: 100%;
+
+                            &:nth-of-type(1) {
+                                margin-top: 41px;
+                            }
                         }
                     }
                 }
@@ -3139,8 +3307,9 @@ main {
         }
 
         .topobg {
-            background-size: 400px;
-            background-position: right -160px center;
+            background-size: cover
+            // background-position: right -160px center;
+
         }
 
         #sessao1, #sessao2 {
@@ -3175,7 +3344,8 @@ main {
         #sessao3 {
             img {
                 margin-top: 40px;
-                margin-bottom: 100px;
+                margin-bottom: 0;
+                max-width: 100%;
             }
         }
 
@@ -3299,8 +3469,8 @@ main {
 
     #tipografia {
         .topobg {
-            background-position: right -139px center;
-            background-size: 400px;
+            background-position: right -180px center;
+            background-size: cover;
         }
 
         #sessao1 {
@@ -3358,6 +3528,7 @@ main {
             img {
                 margin-top: 45px;
                 margin-bottom: 0;
+                max-width: 100%;
             }
         }
 
@@ -3406,8 +3577,8 @@ main {
     #grid {
 
         .topobg {
-            background-size: 300px;
-            background-position: 200px bottom;
+            background-size: cover;
+            // background-position: 200px bottom;
         }
 
         #sessao1 {
@@ -3481,8 +3652,8 @@ main {
 
     #grafismos {
         .topobg {
-            background-size: 678px;
-            background-position-x: -180px;
+            background-size: cover;
+            // background-position-x: -180px;
         }
 
         #sessao2 {
@@ -3525,6 +3696,10 @@ main {
                 div {
                     margin-bottom: 65px;
 
+                    p {
+                        margin: auto!important;
+                    }
+
                     &:nth-of-type(3) {
                         img {
                             padding-left: 30px;
@@ -3561,13 +3736,24 @@ main {
 
                 .wrapper {
                     display: block;
+                    overflow: hidden;
 
                     div {
+                        margin: auto;
                         margin-bottom: 65px;
+                        overflow: hidden;
+                        max-width: 155px;
                     }
 
                     img {
                         margin:auto;
+
+                        &.bg {
+                            bottom: 37px;
+                            max-width: 600px;
+                            left: -45px;
+                            right: 0;
+                        }
                     }
 
                     p {
@@ -3654,6 +3840,10 @@ main {
 
                 .dir {
                     margin: 100px 0 0 0;
+
+                    img {
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -3757,6 +3947,10 @@ main {
                     > div {
                         &:last-of-type {
                             margin-top: 85px;
+
+                            img {
+                                max-width: 100%;
+                            }
                         }
                     }
                    
@@ -3769,6 +3963,7 @@ main {
 
             img {
                 margin-top: 30px;
+                max-width: 100%;
             }
         }
 
@@ -4021,9 +4216,9 @@ main {
 
 /* Beer Slider: */
     .beer-handle {
-        border: 0!important;
-        width: 32px!important;
-        height: 32px!important;
+        
+        width: 36px!important;
+        height: 36px!important;
 
         &:before {
             width: 8px!important;

@@ -82,6 +82,11 @@ jQuery(document).ready(function() {
 				});
 			}
 		})
+
+		$('#botaodotopo').click(function(){
+			$(this).css('opacity','0')
+			$(this).css('cursor','unset')
+		})
 	
 
 		  
@@ -111,13 +116,13 @@ jQuery(document).ready(function() {
 		});
 
 	// Play Video Grid
-		$(function() {
-			var video = $('#videogrid')[0];
-			$(video).click(function(e) {				
-				e.preventDefault();
-				video.play();
-			});
-		});
+		// $(function() {
+		// 	var video = $('#videogrid')[0];
+		// 	$(video).click(function(e) {				
+		// 		e.preventDefault();
+		// 		video.play();
+		// 	});
+		// });
 
 
 
@@ -468,32 +473,32 @@ jQuery(document).ready(function() {
 
 	// Beer Slider		
 		window.onload = (function(){
-			var altura = $('.image-slider').height()+'px';
+			var altura = $('#beer-slider').height()+'px';
 			
 			$('.beer-handle').append('<div class="risco"></div>');
 			$('.risco').css('height', altura);
 
-			var inicial = $('.wrapper-slider').attr('inicial');
-			$('.beer-reveal').css('width', inicial)
-			$('.beer-handle').css('left', inicial)
+			// var inicial = $('.wrapper-slider').attr('inicial');
+			// $('.beer-reveal').css('width', inicial)
+			// $('.beer-handle').css('left', inicial)
 
 		})
 
 		
-		$(".wrapper-slider").click(function(){		
-			var inicial = $(this).attr('inicial');
-			var final = $(this).attr('final');
+		// $(".wrapper-slider").click(function(){		
+		// 	var inicial = $(this).attr('inicial');
+		// 	var final = $(this).attr('final');
 
-			if ( $(this).attr('estagio') == 'final' ) {					
-					$(".beer-handle").animate({left:inicial}, 300)
-					$(".beer-reveal").animate({width:inicial}, 300)
-					$(this).attr('estagio','inicial');
-				} else {
-					$(".beer-handle").animate({left:final}, 300)
-					$(".beer-reveal").animate({width:final}, 300)
-					$(this).attr('estagio','final');
-				}
-		})
+		// 	if ( $(this).attr('estagio') == 'final' ) {					
+		// 			$(".beer-handle").animate({left:inicial}, 300)
+		// 			$(".beer-reveal").animate({width:inicial}, 300)
+		// 			$(this).attr('estagio','inicial');
+		// 		} else {
+		// 			$(".beer-handle").animate({left:final}, 300)
+		// 			$(".beer-reveal").animate({width:final}, 300)
+		// 			$(this).attr('estagio','final');
+		// 		}
+		// })
 
 		
 

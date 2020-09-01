@@ -46,8 +46,8 @@
     .beer-range {
         position: absolute;
         z-index: 2;
-        /* top: 0;
-        bottom: 0; */
+        top: 0;
+        bottom: 0;
         height: 100%;
         margin: 0;
         left: -1px;
@@ -86,8 +86,8 @@
         height: 48px;
         border-radius: 50%;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0);
-        transition: background 0.3s, box-shadow 0.3s, opacity 0.5s 0.25s; 
-        border: 3px solid #fff;
+        transition: background 0.3s, box-shadow 0.3s, opacity 0.5s 0.25s;
+        border: 3px solid #F4F7F8;
     }
 
     .beer-handle:before, .beer-handle:after {

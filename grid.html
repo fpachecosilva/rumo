@@ -59,7 +59,7 @@
             
             <div class="links">
             
-                <a class="home-link" href="javascript:function() { return false; }">DNA Rumo</a>
+                <!-- <a class="home-link" href="javascript:function() { return false; }">DNA Rumo</a> -->
                 <ul>
                     <a class="link-abre " href="index.html">Logo</a>
                     <li>
@@ -80,7 +80,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="paleta.html">Paleta</a>
+                    <a class="link-abre " href="paleta.html">Paleta</a>
                     <li>
                         <a href="#sessao1">Primária</a>
                     </li>
@@ -96,7 +96,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="tipografia.html">Tipografia</a>
+                    <a class="link-abre " href="tipografia.html">Tipografia</a>
                     <li>
                         <a href="#sessao1">Diretrizes</a>
                     </li>
@@ -144,7 +144,7 @@
                     </li>
                 </ul>
 
-                <ul>
+                <!-- <ul>
                     <a class="link-abre" href="javascript:function() { return false; }">Ilustração</a>
                     <li>
                         <a href="#sessao1">Diretrtizes</a>
@@ -164,7 +164,9 @@
                 
                 <ul>
                     <a class="link-abre" href="javascript:function() { return false; }">Ambientação</a>            
-                </ul>
+                </ul> -->
+
+                
                 <a class="tomdevoz" href="tomdevoz.html">Tom de Voz</a>
 
 
@@ -188,7 +190,7 @@
            <section id="sessao1">
                 <article>
                     <div class="grid--2colunas">
-                        <img src="assets/img/grid-sessao1-01.png" alt="">
+                        <img src="assets/img/Rumo_Grid_01.png" alt="">
                         <div class="wrapper-dir">
                             <p class="txt--padrao20">1 - Construa a proporção da peça</p>
                             <p class="txt--padrao12 verde">
@@ -206,7 +208,7 @@
                     </div>
 
                     <div class="grid--2colunas">
-                        <img src="assets/img/grid-sessao1-02.png" alt="">
+                        <img src="assets/img/Rumo_Grid_02.png" alt="">
                         <div class="wrapper-dir">
                             <p class="txt--padrao20">2 - Margem de segurança</p>
                             <p class="txt--padrao12">
@@ -223,8 +225,8 @@
                     <div class="grid--2colunas">
 
                         <div class="videogrid">
-                            <video id='videogrid' src="assets/video/Rumo_Grid_03.mp4" preload="auto" type="video/mp4"></video>
-                            <p class="txt--padrao12">Clique na imagem para ver outras variações.</p>
+                            <video autoplay loop id='videogrid' src="assets/video/Rumo_Grid_03.mp4" preload="auto" type="video/mp4"></video>
+                            <!-- <p class="txt--padrao12">Clique na imagem para ver outras variações.</p> -->
                         </div>
 
 
@@ -250,11 +252,11 @@
                         <div class="image-slider">
     
                             <div id="beer-slider" class="beer-slider" data-beer-label="before">
-                                <img src="assets/img/grid-sessao2-02.png" alt="">
+                                <img src="assets/img/Rumo_Grid_Exemplos_01.png" alt="">
                                 
                                 
                                 <div class="beer-reveal" data-beer-label="after">    
-                                    <img src="assets/img/grid-sessao2-01.png" alt="">                            
+                                    <img src="assets/img/Rumo_Grid_Exemplos_02.png" alt="">                            
                                 </div>
                             </div>
                         </div>
@@ -281,10 +283,10 @@
             </section>
             
             <footer>
-                <a href="grid.html">
+                <a href="grafismos.html">
                     <div class="nomelink">
                         <p class="txt--padrao12">Próximo</p>
-                        <p class="txt--bold">Grid</p>
+                        <p class="txt--bold">Grafismos</p>
                     </div>
                     <img src="assets/img/footerseta.svg" alt="">
                 </a>
@@ -303,9 +305,8 @@
     <script type="text/javascript" src="assets/js/estrutura.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/BeerSlider.js"></script>
-    <script>
-        var inicial = $('.wrapper-slider').attr('inicial');
-        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: inicial } );
+    <script>        
+        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: 50 } );
     </script>
 
 </body>

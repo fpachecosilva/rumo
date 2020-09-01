@@ -60,7 +60,7 @@
             
             <div class="links">
             
-                <a class="home-link" href="javascript:function() { return false; }">DNA Rumo</a>
+                <!-- <a class="home-link" href="javascript:function() { return false; }">DNA Rumo</a> -->
                 <ul>
                     <a class="link-abre " href="index.html">Logo</a>
                     <li>
@@ -81,7 +81,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="paleta.html">Paleta</a>
+                    <a class="link-abre " href="paleta.html">Paleta</a>
                     <li>
                         <a href="#sessao1">Primária</a>
                     </li>
@@ -97,7 +97,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="tipografia.html">Tipografia</a>
+                    <a class="link-abre " href="tipografia.html">Tipografia</a>
                     <li>
                         <a href="#sessao1">Diretrizes</a>
                     </li>
@@ -110,7 +110,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="grid.html">Grid</a>
+                    <a class="link-abre " href="grid.html">Grid</a>
                     <li>
                         <a href="#sessao1">Construção</a>
                     </li>
@@ -145,7 +145,7 @@
                     </li>
                 </ul>
 
-                <ul>
+                <!-- <ul>
                     <a class="link-abre" href="javascript:function() { return false; }">Ilustração</a>
                     <li>
                         <a href="#sessao1">Diretrtizes</a>
@@ -165,7 +165,9 @@
                 
                 <ul>
                     <a class="link-abre" href="javascript:function() { return false; }">Ambientação</a>            
-                </ul>
+                </ul> -->
+
+                
                 <a class="tomdevoz" href="tomdevoz.html">Tom de Voz</a>
 
 
@@ -204,9 +206,9 @@
                                     <div class="image-slider">
 
                                         <div id="beer-slider" class="beer-slider" data-beer-label="before">
-                                            <img src="assets/img/iconografia-sessao2-01.png" alt="">
+                                            <img src="assets/img/Rumo_Iconografia_Grid1.png" alt="">
                                             <div class="beer-reveal" data-beer-label="after">                                
-                                                <img src="assets/img/iconografia-sessao2-02.png" alt="">
+                                                <img src="assets/img/Rumo_Iconografia_Grid2.png" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +218,7 @@
 
                             <div>
                                 <p class="txt--padrao20">Exemplos:</p>
-                                <img src="assets/img/iconografia-sessao2-03.png" alt="">
+                                <img src="assets/img/Rumo_Iconografia_Exemplos.png" alt="">
                             </div>
                             
                     </div>
@@ -227,12 +229,12 @@
            <section id="sessao3">
                <article>
                    <p class="txt--padrao20">Os ícones podem absorver todas as cores da paleta, das principais às secundárias.</p>
-                   <img src="assets/img/iconografia-sessao3.png" alt="">
+                   <img src="assets/img/Rumo_Iconografia_Fundos.png" alt="">
                </article>
            </section>
 
            <section id="sessao4">
-                <img src="assets/img/iconografia-sessao4.png" alt="">
+                <img src="assets/img/Rumo_Iconografia_Aplicacao.png" alt="">
            </section>
 
             <section id="download" class="verde">
@@ -249,7 +251,7 @@
             </section>
 
             <footer>
-                <a href="paleta.html">
+                <a >
                     <div class="nomelink">
                         <p class="txt--padrao12">Próximo</p>
                         <p class="txt--bold">Ilustração</p>
@@ -271,9 +273,8 @@
     <script type="text/javascript" src="assets/js/estrutura.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/BeerSlider.js"></script>
-    <script>
-        var inicial = $('.wrapper-slider').attr('inicial');
-        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: inicial } );
+    <script>        
+        var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: 50 } );
     </script>
 
 </body>
