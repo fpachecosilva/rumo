@@ -58,7 +58,9 @@ body {
   line-height: 1.625rem;
   height: 100%;
   min-height: 100% !important;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body p {
@@ -692,6 +694,183 @@ header.topobg {
 }
 
 /* :Topo Desktop */
+/* Pagina DNA Desktop: */
+#dna main {
+  margin-top: 100vh;
+}
+
+#dna #sessao1 {
+  padding-top: 99px;
+  padding-bottom: 125px;
+}
+
+#dna #sessao1 article {
+  max-width: 100%;
+}
+
+#dna #sessao1 p.txt--padrao20 {
+  font-weight: normal;
+  max-width: 468px;
+}
+
+#dna #sessao1 .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dna #sessao2 {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  height: 570px;
+}
+
+#dna #sessao2 .wrapper {
+  background-color: var(--bgcinza);
+  height: 354px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#dna #sessao2 .dnabgtitulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#dna #sessao2 .dnabgtitulo p.dna {
+  float: left;
+  color: var(--secundaria);
+  font-size: 5.75rem;
+  line-height: 5.75rem;
+  max-width: 242px;
+  font-weight: bold;
+  margin-left: 48px;
+}
+
+#dna #sessao2 img {
+  width: 510.5px;
+  position: absolute;
+  top: -216px;
+  right: 0;
+}
+
+#dna #sessao3 {
+  height: 293px;
+  background-color: var(--principal);
+}
+
+#dna #sessao3 article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+}
+
+#dna #sessao3 article .grid--2colunas {
+  width: 100%;
+}
+
+#dna #sessao3 p {
+  color: #fff;
+}
+
+#dna #sessao3 p.txt--padrao20 {
+  font-weight: normal;
+  max-width: 462px;
+  padding-left: 38px;
+  border-left: 1px solid #fff;
+  display: block;
+}
+
+#dna #sessao3 p.maior {
+  font-size: 2.875rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  max-width: 415px;
+}
+
+#dna #sessao4 {
+  padding: 125px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dna #sessao4:before {
+  content: '';
+  display: block;
+  width: calc( 100% - 96px);
+  height: 1px;
+  background-color: var(--cinza1);
+  position: absolute;
+  bottom: 0;
+}
+
+#dna #sessao4 p {
+  max-width: 635px;
+  text-align: center;
+}
+
+#dna #sessao5 .box {
+  width: 100%;
+  margin-top: 244px;
+}
+
+#dna #sessao5 .box img {
+  width: 549px;
+}
+
+#dna #sessao5 .box .texto {
+  margin: 0 48px;
+  max-width: 440px;
+}
+
+#dna #sessao5 .box .texto p.txt--padrao40::first-letter {
+  font-size: 5.125rem;
+}
+
+#dna #sessao5 .box .texto p.txt--padrao20 {
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+#dna #sessao5 .box .texto span {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+  display: block;
+}
+
+#dna #sessao5 .box.dir img {
+  float: right;
+}
+
+#dna #sessao5 .box.esq img {
+  float: left;
+}
+
+/* :Pagina DNA Desktop */
 /* Pagina Logotipo Desktop: */
 #logotipo main {
   margin-top: 100vh;
@@ -3027,6 +3206,9 @@ footer .trademark p {
   /* Pagina Logotipo Mobile: */
   #logotipo main {
     margin-top: initial;
+  }
+  #logotipo main header {
+    margin-top: 0;
   }
   #logotipo p.txt--padrao40 {
     margin-bottom: 27px;

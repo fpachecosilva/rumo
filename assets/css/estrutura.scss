@@ -479,6 +479,179 @@ main {
 /* :Topo Desktop */
 
 
+/* Pagina DNA Desktop: */
+    #dna {
+
+        main {
+            margin-top: 100vh;
+        }
+
+        #sessao1 {
+            padding-top: 99px;
+            padding-bottom: 125px;
+
+            article {
+                max-width: 100%;
+            }
+
+            p.txt--padrao20 {
+                font-weight: normal;
+                max-width: 468px;
+            }
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                align-items: center;
+            }
+        }
+
+        #sessao2 {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            height: 570px;
+
+            .wrapper {
+                background-color: var(--bgcinza);
+                height: 354px;
+                position: absolute;
+                bottom: 0;
+                left:0;
+                right: 0;
+            }
+            
+            .dnabgtitulo {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                p.dna {
+                    float: left;
+                    color: var(--secundaria);
+                    font-size: 5.75rem;
+                    line-height: 5.75rem;
+                    max-width: 242px;
+                    font-weight: bold;
+                    margin-left: 48px;
+                }
+            }
+
+            img {
+                width: 510.5px;
+                position: absolute;
+                top: -216px;
+                right: 0;
+            }
+        }
+
+        #sessao3 {
+            height: 293px;
+            background-color: var(--principal);
+
+            article {
+                display: flex;
+                align-items: center;
+                max-width: 100%;
+
+                .grid--2colunas {
+                    width: 100%;                    
+                }
+            }
+            
+            p {
+                color: #fff;
+
+                &.txt--padrao20 {
+                    font-weight: normal;
+                    max-width: 462px;
+                    padding-left: 38px;
+                    border-left: 1px solid #fff;
+                    display: block;
+                }
+
+                &.maior {
+                    font-size: 2.875rem;
+                    line-height: 2.5rem;
+                    font-weight: bold;
+                    max-width: 415px;
+                }
+            }
+        }
+
+
+        #sessao4 {
+            padding: 125px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                content: '';
+                display: block;
+                width: calc( 100% - 96px);
+                height: 1px;
+                background-color: var(--cinza1);
+                position: absolute;
+                bottom: 0;
+            }
+
+            p {
+                max-width: 635px;
+                text-align: center;
+            }
+        }
+
+
+
+        #sessao5 {
+            
+            .box {
+                width: 100%;
+                margin-top: 244px;
+                
+                img {
+                    width: 549px;
+                }
+
+                .texto {
+                    margin: 0 48px;
+                    max-width: 440px;
+
+                    p.txt--padrao40::first-letter {
+                        font-size: 5.125rem;
+                    }
+
+                    p.txt--padrao20 {
+                        font-weight: normal;
+                        margin-top: 20px;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-size: 0.875rem;
+                        margin-bottom: 30px;
+                        display: block;
+                    }
+                }
+
+                &.dir {
+                    img {
+                        float: right;
+                    }
+                }
+
+                &.esq {
+                    img {
+                        float: left;
+                    }
+                }
+            }
+            
+        }
+
+    }
+/* :Pagina DNA Desktop */
 
 
 /* Pagina Logotipo Desktop: */
@@ -3061,6 +3234,10 @@ main {
 
         main {
             margin-top: initial;
+
+            header {
+                margin-top: 0;
+            }
         }
 
         p.txt--padrao40 {
