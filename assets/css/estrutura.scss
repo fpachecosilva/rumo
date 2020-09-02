@@ -592,7 +592,7 @@ main {
             }
             
             p {
-                font-family: 'Cera Pro';
+                font-family: 'cera_proregular';
                 font-size: 0.875rem;
                 line-height: 1.06rem;
                 margin-top: 20px;
@@ -687,6 +687,16 @@ main {
 
         .txt--padrao12 {
             margin-bottom: 55px;
+        }
+
+        .ideia {
+            margin-bottom: 0;
+
+            &:hover {
+                .destaque-ideia {
+                    width: 380px;
+                }
+            }
         }
     }
 
@@ -1077,14 +1087,14 @@ main {
                 margin-bottom: 92px;
 
                 p {
-                    font-family: 'Cera Pro';
+                    font-family: 'cera_proregular';
                     font-size: 0.75rem;
                     color: #fff;
                     line-height: initial;
 
                     &:first-of-type {
                         font-size: 1.125rem;
-                        font-weight: bold;
+                        font-family: 'cera_probold';
                     }
 
                     &:last-of-type {
@@ -1246,7 +1256,7 @@ main {
                         display: flex;
                         align-items: center;
                         padding-left: 17px;
-                        font-family: Cera Pro;
+                        font-family: 'cera_proregular';
                         font-size: 0.875rem;
                         color: #000;
 
@@ -1271,9 +1281,8 @@ main {
 
                 .cinza-rumo {
                     background-color: var(--cinza1);
-                    color: #000;
-                    font-weight: bold;
-                    font-family: Cera Pro;
+                    color: #000;                    
+                    font-family: 'cera_probold';
                     display: flex;
                     align-items: center;
                     padding-left: 17px;
@@ -1339,7 +1348,7 @@ main {
                     bottom: 12px;
                     left: 36px;
                     font-size: 14px;
-                    font-family: Cera Pro;
+                    font-family: 'cera_proregular';
                     color: #000;
                 }
             }
@@ -1386,7 +1395,7 @@ main {
 
             article {
                 > p {
-                    font-family: 'Cera Pro';
+                    font-family: 'cera_proregular';
                     font-size: 0.8125rem;
                     padding-top: 45px;
                     padding-bottom: 25px;
@@ -1394,7 +1403,7 @@ main {
 
                 p {
                     color: #fff;
-                    font-family: 'Cera Pro';
+                    font-family: 'cera_proregular';
                 }
 
                 .esq {
@@ -1423,37 +1432,43 @@ main {
 
                         &:nth-child(1) {
                             p {              
-                               font-weight: 100;
+                            //    font-weight: 100;
+                               font-family: 'cera_prothin';
                             }
                         }
 
                         &:nth-child(2) {
                             p {                                
-                               font-weight: 300;
+                            //    font-weight: 300;
+                               font-family: 'cera_prolight';
                             }
                         }
 
                         &:nth-child(3) {
                             p {                                
-                                font-weight: 400;
+                                // font-weight: 400;
+                                font-family: 'cera_proregular';
                             }
                         }
 
                         &:nth-child(4) {
                             p {                                
-                               font-weight: 500;
+                            //    font-weight: 500;
+                            font-family: 'cera_promedium';
                             }
                         }
 
                         &:nth-child(5) {
                             p {                                
-                                font-weight: 700;
+                                // font-weight: 700;
+                                font-family: 'cera_probold';
                             }
                         }
 
                         &:nth-child(6) {
                             p {                                
-                                font-weight: 900;
+                                // font-weight: 900;
+                                font-family: 'cera_problack';
                             }
                         }
 
@@ -1466,27 +1481,33 @@ main {
                         line-height: 4rem;
 
                         &:nth-child(1) {
-                            font-weight: 100;
+                            // font-weight: 100;
+                            font-family: 'cera_prothin';
                         }
 
                         &:nth-child(2) {
-                            font-weight: 300;
+                            // font-weight: 300;
+                            font-family: 'cera_prolight';
                         }
 
                         &:nth-child(3) {
-                            font-weight: 400;
+                            // font-weight: 400;
+                            font-family: 'cera_proregular';
                         }
 
                         &:nth-child(4) {
-                            font-weight: 500;
+                            // font-weight: 500;
+                            font-family: 'cera_promedium';
                         }
 
                         &:nth-child(5) {
-                            font-weight: 700;
+                            // font-weight: 700;
+                            font-family: 'cera_probold';
                         }
 
                         &:nth-child(6) {
-                            font-weight: 900;
+                            // font-weight: 900;
+                            font-family: 'cera_problack';
                         }
                     }
                 }
@@ -2012,7 +2033,7 @@ main {
                     margin-right: 27px;
 
                     p {
-                        font-family: Cera Pro;
+                        font-family: 'cera_probold';
                         font-size: 1.0625rem;
                         font-weight: bold;
                         color: var(--secundaria);

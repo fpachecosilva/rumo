@@ -818,7 +818,7 @@ header.logotipo {
 }
 
 #logotipo #sessao4 .wrapper p {
-  font-family: 'Cera Pro';
+  font-family: 'cera_proregular';
   font-size: 0.875rem;
   line-height: 1.06rem;
   margin-top: 20px;
@@ -913,6 +913,14 @@ header.logotipo {
 
 #logotipo #sessao7 .txt--padrao12 {
   margin-bottom: 55px;
+}
+
+#logotipo #sessao7 .ideia {
+  margin-bottom: 0;
+}
+
+#logotipo #sessao7 .ideia:hover .destaque-ideia {
+  width: 380px;
 }
 
 #logotipo #sessao8 .conteudo {
@@ -1280,7 +1288,7 @@ header.logotipo {
 }
 
 #paleta #sessao4 .cards p {
-  font-family: 'Cera Pro';
+  font-family: 'cera_proregular';
   font-size: 0.75rem;
   color: #fff;
   line-height: initial;
@@ -1288,7 +1296,7 @@ header.logotipo {
 
 #paleta #sessao4 .cards p:first-of-type {
   font-size: 1.125rem;
-  font-weight: bold;
+  font-family: 'cera_probold';
 }
 
 #paleta #sessao4 .cards p:last-of-type {
@@ -1422,7 +1430,7 @@ header.logotipo {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 17px;
-  font-family: Cera Pro;
+  font-family: 'cera_proregular';
   font-size: 0.875rem;
   color: #000;
 }
@@ -1446,8 +1454,7 @@ header.logotipo {
 #paleta #sessao5 .quadrado-cores .cinza-rumo {
   background-color: var(--cinza1);
   color: #000;
-  font-weight: bold;
-  font-family: Cera Pro;
+  font-family: 'cera_probold';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1518,7 +1525,7 @@ header.logotipo {
   bottom: 12px;
   left: 36px;
   font-size: 14px;
-  font-family: Cera Pro;
+  font-family: 'cera_proregular';
   color: #000;
 }
 
@@ -1559,7 +1566,7 @@ header.logotipo {
 }
 
 #tipografia #sessao2 article > p {
-  font-family: 'Cera Pro';
+  font-family: 'cera_proregular';
   font-size: 0.8125rem;
   padding-top: 45px;
   padding-bottom: 25px;
@@ -1567,7 +1574,7 @@ header.logotipo {
 
 #tipografia #sessao2 article p {
   color: #fff;
-  font-family: 'Cera Pro';
+  font-family: 'cera_proregular';
 }
 
 #tipografia #sessao2 article .esq {
@@ -1597,27 +1604,27 @@ header.logotipo {
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(1) p {
-  font-weight: 100;
+  font-family: 'cera_prothin';
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(2) p {
-  font-weight: 300;
+  font-family: 'cera_prolight';
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(3) p {
-  font-weight: 400;
+  font-family: 'cera_proregular';
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(4) p {
-  font-weight: 500;
+  font-family: 'cera_promedium';
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(5) p {
-  font-weight: 700;
+  font-family: 'cera_probold';
 }
 
 #tipografia #sessao2 article .esq .box:nth-child(6) p {
-  font-weight: 900;
+  font-family: 'cera_problack';
 }
 
 #tipografia #sessao2 article .dir p {
@@ -1626,27 +1633,27 @@ header.logotipo {
 }
 
 #tipografia #sessao2 article .dir p:nth-child(1) {
-  font-weight: 100;
+  font-family: 'cera_prothin';
 }
 
 #tipografia #sessao2 article .dir p:nth-child(2) {
-  font-weight: 300;
+  font-family: 'cera_prolight';
 }
 
 #tipografia #sessao2 article .dir p:nth-child(3) {
-  font-weight: 400;
+  font-family: 'cera_proregular';
 }
 
 #tipografia #sessao2 article .dir p:nth-child(4) {
-  font-weight: 500;
+  font-family: 'cera_promedium';
 }
 
 #tipografia #sessao2 article .dir p:nth-child(5) {
-  font-weight: 700;
+  font-family: 'cera_probold';
 }
 
 #tipografia #sessao2 article .dir p:nth-child(6) {
-  font-weight: 900;
+  font-family: 'cera_problack';
 }
 
 #tipografia #sessao2 .wrapper {
@@ -2138,7 +2145,7 @@ header.logotipo {
 }
 
 #grafismos #sessao7 .wrapper .box p {
-  font-family: Cera Pro;
+  font-family: 'cera_probold';
   font-size: 1.0625rem;
   font-weight: bold;
   color: var(--secundaria);
