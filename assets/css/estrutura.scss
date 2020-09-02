@@ -2215,8 +2215,9 @@ main {
 
         .topobg {
             background-color: var(--verde1);
-            background-image: url('../img/tomdevozbg.png');
-            background-position: right 45px center;
+            background-image: url('../img/Rumo_TomdeVoz_Banner.png');
+            // background-position: right 45px center;
+            background-size: cover;
         }
 
         .wrapper-abas {
@@ -4039,9 +4040,7 @@ main {
 /* Pagina Tom de Voz Mobile: */
     #tomdevoz {
         .topobg {
-            background-size: 350px;
-            background-position-y: 30px;
-            background-position-x: 112px;
+            background-size: cover;
         }
         
         .wrapper-abas {

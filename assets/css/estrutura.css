@@ -2288,8 +2288,8 @@ header.logotipo {
 /* Pagina Tom de Voz Desktop: */
 #tomdevoz .topobg {
   background-color: var(--verde1);
-  background-image: url("../img/tomdevozbg.png");
-  background-position: right 45px center;
+  background-image: url("../img/Rumo_TomdeVoz_Banner.png");
+  background-size: cover;
 }
 
 #tomdevoz .wrapper-abas {
@@ -3682,9 +3682,7 @@ footer .trademark p {
   /* :Pagina Iconografia Mobile */
   /* Pagina Tom de Voz Mobile: */
   #tomdevoz .topobg {
-    background-size: 350px;
-    background-position-y: 30px;
-    background-position-x: 112px;
+    background-size: cover;
   }
   #tomdevoz .wrapper-abas {
     display: block;
