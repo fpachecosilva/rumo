@@ -439,6 +439,20 @@ nav.menu ul {
   position: relative;
 }
 
+nav.menu ul:first-of-type {
+  margin-bottom: 30px;
+}
+
+nav.menu ul:first-of-type:after {
+  content: '';
+  width: calc( 100% + 30px);
+  height: 1px;
+  background-color: #5CB2E1;
+  position: absolute;
+  bottom: -17px;
+  left: -30px;
+}
+
 nav.menu ul > a {
   font-weight: bold;
 }
@@ -1028,6 +1042,7 @@ header.topobg {
   width: 815px;
   max-width: 100%;
   margin: auto;
+  z-index: 0;
 }
 
 #dna #sessao7 .videowrapper video {
@@ -1086,6 +1101,7 @@ header.topobg {
   width: 815px;
   max-width: 100%;
   margin: auto;
+  z-index: 0;
 }
 
 #dna #sessao8 .videowrapper video {
@@ -1164,10 +1180,6 @@ header.topobg {
 
 /* :Pagina DNA Desktop */
 /* Pagina Logotipo Desktop: */
-#logotipo main {
-  margin-top: 100vh;
-}
-
 #logotipo p.txt--padrao12 {
   max-width: 570px;
 }
@@ -3522,6 +3534,145 @@ footer .trademark p {
     bottom: 16px;
   }
   /* :Header Mobile */
+  /* Pagina DNA Mobile: */
+  #dna main {
+    margin-top: initial;
+  }
+  #dna #sessao1 {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  #dna #sessao1 .wrapper {
+    display: block;
+  }
+  #dna #sessao1 .wrapper p.txt--padrao40 {
+    max-width: 192px;
+    margin-bottom: 20px;
+  }
+  #dna #sessao1 .wrapper p.txt--padrao20 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  #dna #sessao2 {
+    padding-bottom: 45px;
+    height: auto;
+  }
+  #dna #sessao2 .wrapper {
+    position: initial;
+    height: auto;
+  }
+  #dna #sessao2 img {
+    position: initial;
+  }
+  #dna #sessao2 .dnabgtitulo {
+    display: block;
+    height: auto;
+  }
+  #dna #sessao2 .dnabgtitulo p.dna {
+    font-size: 3.8125rem;
+    line-height: 3.8125rem;
+    margin: 35px;
+  }
+  #dna #sessao3 {
+    height: auto;
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+  #dna #sessao3 p.maior {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+  #dna #sessao3 p.maior:after {
+    content: '';
+    display: block;
+    width: 182px;
+    height: 1px;
+    background-color: #fff;
+    margin: 25px 0;
+  }
+  #dna #sessao3 p.txt--padrao20 {
+    max-width: 100%;
+    padding: 0;
+    border: 0;
+    line-height: 1.625rem;
+    font-size: 1rem;
+  }
+  #dna #sessao4 {
+    padding-top: 60px;
+    padding-bottom: 115px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  #dna #sessao4:before {
+    content: none;
+  }
+  #dna #sessao4 p {
+    text-align: left;
+  }
+  #dna #sessao5 .box {
+    margin-top: 65px;
+  }
+  #dna #sessao5 .box:first-of-type {
+    margin-top: 0;
+  }
+  #dna #sessao5 .box.grid--2colunas:not(.esq) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #dna #sessao5 .box img {
+    margin-bottom: 25px;
+  }
+  #dna #sessao5 .box .texto {
+    margin: 0 35px;
+  }
+  #dna #sessao5 .box .texto p.txt--padrao20 {
+    font-size: 1rem;
+    line-height: 1.675rem;
+  }
+  #dna #sessao5 .box .texto p.txt--padrao40 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+  #dna #sessao5 .box .texto p.txt--padrao40::first-letter {
+    font-size: 2.25rem;
+  }
+  #dna #sessao6 {
+    padding-top: 85px;
+    padding-bottom: 30px;
+  }
+  #dna #sessao6 p.txt--padrao20 {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+  #dna #sessao7 {
+    padding-bottom: 65px;
+  }
+  #dna #sessao7 p.txt--padrao20 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 35px;
+  }
+  #dna #sessao8 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  #dna #sessao8 p.txt--padrao40 {
+    margin-bottom: 30px;
+  }
+  #dna #sessao9 {
+    padding-bottom: 85px;
+  }
+  #dna #sessao9 .wrapper-img img {
+    max-width: initial;
+    max-height: 360px;
+    margin-right: 45px;
+  }
+  /* :Pagina DNA Mobile */
   /* Pagina Logotipo Mobile: */
   #logotipo main {
     margin-top: initial;

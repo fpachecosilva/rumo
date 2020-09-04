@@ -220,6 +220,21 @@ main {
         }
 
         ul {
+
+            &:first-of-type {
+                margin-bottom: 30px;
+
+                &:after {
+                    content: '';
+                    width: calc( 100% + 30px);
+                    height: 1px;
+                    background-color: #5CB2E1;
+                    position: absolute;
+                    bottom: -17px;
+                    left: -30px;
+                }
+            }
+
             margin-left: var(--margin);
             position: relative;
             
@@ -481,6 +496,7 @@ main {
 
 /* Pagina DNA Desktop: */
     #dna {
+        
 
         main {
             margin-top: 100vh;
@@ -782,6 +798,7 @@ main {
                 width: 815px;
                 max-width: 100%;
                 margin: auto;
+                z-index: 0;
 
                 video {
                     width: 815px;
@@ -836,6 +853,7 @@ main {
                 width: 815px;
                 max-width: 100%;
                 margin: auto;
+                z-index: 0;
 
                 video {
                     width: 815px;
@@ -911,10 +929,7 @@ main {
 
 /* Pagina Logotipo Desktop: */
     #logotipo {
-
-        main {
-            margin-top: 100vh;
-        }
+        
 
         p.txt--padrao12 {
             max-width: 570px;
@@ -3520,6 +3535,186 @@ main {
         }
     }
 /* :Header Mobile */
+
+
+
+
+/* Pagina DNA Mobile: */
+    #dna {
+        main {
+            margin-top: initial;
+        }
+
+        #sessao1 {
+            padding-top: 30px;
+            padding-bottom: 70px;
+
+            .wrapper {
+                display: block;
+
+                p.txt--padrao40 {
+                    max-width: 192px;
+                    margin-bottom: 20px;
+                }
+
+                p.txt--padrao20 {
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                }
+            }
+        }
+
+        #sessao2 {
+            padding-bottom: 45px;
+            height: auto;
+
+            .wrapper {
+                position: initial;
+                height: auto;
+            }
+            
+            img {
+                position: initial;
+            }
+
+            .dnabgtitulo {
+                display: block;
+                height: auto;
+
+                p.dna {
+                    font-size: 3.8125rem;
+                    line-height: 3.8125rem;
+                    margin: 35px;
+                }
+            }
+        }
+
+        #sessao3 {
+            height: auto;
+            padding-top: 55px;
+            padding-bottom: 40px;
+
+            p.maior {
+                font-size: 1.75rem;
+                line-height: 1.75rem;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 182px;
+                    height: 1px;
+                    background-color: #fff;
+                    margin: 25px 0;
+                }
+            }
+
+            p.txt--padrao20 {
+                max-width: 100%;
+                padding: 0;
+                border: 0;
+                line-height: 1.625rem;
+                font-size: 1rem;
+            }
+        }
+
+        #sessao4 {
+            padding-top: 60px;
+            padding-bottom: 115px;
+            padding-left: 35px;
+            padding-right: 35px;
+
+            &:before{
+                content: none;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        #sessao5 {
+            .box {
+                margin-top: 65px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &.grid--2colunas:not(.esq) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                img {
+                    margin-bottom: 25px;
+                }
+
+                .texto {
+                    margin: 0 35px;
+
+                    p.txt--padrao20 {
+                        font-size: 1rem;
+                        line-height: 1.675rem;
+                    }
+
+                    p.txt--padrao40 {
+                        font-size: 1.75rem;
+                        line-height: 1.75rem;
+
+                        &::first-letter {
+                            font-size: 2.25rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #sessao6 {
+            padding-top: 85px;
+            padding-bottom: 30px;
+
+            p.txt--padrao20 {
+                font-size: 1.75rem;
+                margin-bottom: 0;
+            }
+        }
+
+        #sessao7 {
+            padding-bottom: 65px;
+            
+            p.txt--padrao20 {
+                font-size: 1rem;
+                line-height: 1.625rem;
+                margin-bottom: 35px;
+            }
+        }
+
+        #sessao8 {
+            padding-top: 65px;
+            padding-bottom: 65px;
+
+            p.txt--padrao40 {
+                margin-bottom: 30px;
+            }
+        }
+
+        #sessao9 {
+            padding-bottom: 85px;
+
+            .wrapper-img {
+                img {
+                    max-width: initial;
+                    max-height: 360px;
+                    margin-right: 45px;
+                }
+            }
+        }
+
+    }
+/* :Pagina DNA Mobile */
+
+
 
 
 /* Pagina Logotipo Mobile: */
