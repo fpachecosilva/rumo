@@ -127,22 +127,22 @@ jQuery(document).ready(function() {
 
 
 	// Play Grafismos 1
-	$(function() {
-		// var video = $('#grafismos2')[0];
-		var video = $('#grafismos1')[0];
-		
-		$(video).siblings('.pelicula').click(function(e) {
-			e.preventDefault();
-			video.play()
+		$(function() {
+			// var video = $('#grafismos2')[0];
+			var video = $('#grafismos1')[0];
+			
+			$(video).siblings('.pelicula').click(function(e) {
+				e.preventDefault();
+				video.play()
 
-			$(this).fadeOut();
+				$(this).fadeOut();
 
-			video.addEventListener('ended', function () {
-				$(video).siblings('.pelicula').fadeIn();
-			  },false);
+				video.addEventListener('ended', function () {
+					$(video).siblings('.pelicula').fadeIn();
+				},false);
 
+			});
 		});
-	});
 
 	// Play Grafismos 2
 		$(function() {
@@ -161,6 +161,81 @@ jQuery(document).ready(function() {
 
 			});
 		});
+
+
+	// Play Identidade
+		$(function() {				
+			var video = $('#dna1')[0];
+			
+			$(video).siblings('.pelicula').click(function(e) {
+				e.preventDefault();
+				video.play()
+
+				$(this).fadeOut();
+
+				video.addEventListener('ended', function () {
+					$(video).siblings('.pelicula').fadeIn();
+				},false);
+
+			});
+		});
+
+	
+	// Play Manifesto 2
+		$(function() {				
+			var video = $('#dna2')[0];
+			
+			$(video).siblings('.pelicula').click(function(e) {
+				e.preventDefault();
+				video.play()
+
+				$(this).fadeOut();
+
+				video.addEventListener('ended', function () {
+					$(video).siblings('.pelicula').fadeIn();
+				},false);
+
+			});
+		});
+
+
+
+
+	// Slider Inspiração
+		if ( document.getElementById('dna') ) {
+
+			const slider = document.querySelector('.wrapper-img');
+			let isDown = false;
+			let startX;
+			let scrollLeft;
+	
+			slider.addEventListener('mousedown', (e) => {
+				isDown = true;
+				slider.classList.add('active');
+				startX = e.pageX - slider.offsetLeft;
+				scrollLeft = slider.scrollLeft;
+			});
+			slider.addEventListener('mouseleave', () => {
+				isDown = false;
+				slider.classList.remove('active');
+			});
+			slider.addEventListener('mouseup', () => {
+				isDown = false;
+				slider.classList.remove('active');
+			});
+			slider.addEventListener('mousemove', (e) => {
+				if(!isDown) return;
+				e.preventDefault();
+				const x = e.pageX - slider.offsetLeft;
+				const walk = (x - startX) * 1.6; //scroll-fast
+				slider.scrollLeft = scrollLeft - walk;
+				// console.log(walk);
+			});
+			
+		}
+	
+
+
 
 
 	// Controle do ver mais

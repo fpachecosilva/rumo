@@ -837,6 +837,10 @@ header.topobg {
   margin-top: 244px;
 }
 
+#dna #sessao5 .box:first-of-type {
+  margin-top: 154px;
+}
+
 #dna #sessao5 .box img {
   width: 549px;
 }
@@ -844,6 +848,10 @@ header.topobg {
 #dna #sessao5 .box .texto {
   margin: 0 48px;
   max-width: 440px;
+}
+
+#dna #sessao5 .box .texto p.txt--padrao40 {
+  max-width: 332px;
 }
 
 #dna #sessao5 .box .texto p.txt--padrao40::first-letter {
@@ -868,6 +876,290 @@ header.topobg {
 
 #dna #sessao5 .box.esq img {
   float: left;
+}
+
+#dna #sessao6 {
+  padding-top: 141px;
+  padding-bottom: 83px;
+}
+
+#dna #sessao6 p.txt--padrao20 {
+  margin-bottom: 65px;
+}
+
+#dna #sessao6 .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dna #sessao6 .wrapper .linhas {
+  margin-bottom: 26px;
+}
+
+#dna #sessao6 .wrapper .linhas > div:first-child {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 0.8125rem;
+  text-align: right;
+  margin-right: 45px;
+  position: relative;
+  min-height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#dna #sessao6 .wrapper .linhas > div:first-child:after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background-color: var(--principal);
+  position: absolute;
+  right: -45px;
+  top: 0;
+}
+
+#dna #sessao6 .wrapper .linhas > div > div {
+  margin-left: 35px;
+}
+
+#dna #sessao6 .wrapper .linhas.colunasX2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 142px auto;
+      grid-template-columns: 142px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dna #sessao6 .wrapper .linhas.colunasX2 > div:last-of-type {
+  margin-left: 35px;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+#dna #sessao6 .wrapper .linhas div.top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 10px;
+}
+
+#dna #sessao6 .wrapper .linhas.colunasX5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 142px 1fr 1fr 1fr 1fr;
+      grid-template-columns: 142px 1fr 1fr 1fr 1fr;
+}
+
+#dna #sessao6 .wrapper .linhas.colunasX5 div.italic {
+  font-style: italic;
+  font-size: 0.75rem;
+  line-height: 0.8125rem;
+  text-transform: uppercase;
+  max-width: 100px;
+  font-weight: bold;
+  margin-left: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dna #sessao6 .wrapper .linhas .principal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+#dna #sessao6 .wrapper .linhas .principal div:first-child {
+  margin-left: 35px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 100px;
+  margin-bottom: 14px;
+}
+
+#dna #sessao6 .wrapper .linhas .principal div:first-child::first-letter {
+  font-size: 1.125rem;
+}
+
+#dna #sessao6 .wrapper .linhas .principal div:last-child {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+  color: #000;
+}
+
+#dna #sessao7 {
+  background-color: var(--bgcinza);
+  padding-top: 75px;
+  padding-bottom: 165px;
+}
+
+#dna #sessao7 p.txt--padrao20 {
+  margin-bottom: 85px;
+  margin-top: 20px;
+}
+
+#dna #sessao7 .videowrapper {
+  position: relative;
+  width: 815px;
+  max-width: 100%;
+  margin: auto;
+}
+
+#dna #sessao7 .videowrapper video {
+  width: 815px;
+  max-width: 100%;
+  display: block;
+}
+
+#dna #sessao7 .videowrapper .pelicula {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000007a;
+  cursor: pointer;
+  width: 100%;
+  z-index: 5;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dna #sessao7 .videowrapper .pelicula:after {
+  content: url("../img/play.svg");
+}
+
+#dna #sessao8 {
+  background-color: var(--principal);
+  padding-top: 40px;
+  padding-bottom: 117px;
+}
+
+#dna #sessao8 p {
+  color: #fff;
+}
+
+#dna #sessao8 p.txt--padrao40 {
+  margin-bottom: 85px;
+}
+
+#dna #sessao8 p.txt--padrao12 {
+  position: absolute;
+  bottom: -25px;
+}
+
+#dna #sessao8 .videowrapper {
+  position: relative;
+  width: 815px;
+  max-width: 100%;
+  margin: auto;
+}
+
+#dna #sessao8 .videowrapper video {
+  width: 815px;
+  max-width: 100%;
+  display: block;
+}
+
+#dna #sessao8 .videowrapper .pelicula {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000007a;
+  cursor: pointer;
+  width: 100%;
+  z-index: 5;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dna #sessao8 .videowrapper .pelicula:after {
+  content: url("../img/play.svg");
+}
+
+#dna #sessao9 {
+  padding-bottom: 170px;
+  background-color: var(--principal);
+}
+
+#dna #sessao9 p {
+  color: #fff;
+}
+
+#dna #sessao9 p.txt--padrao40 {
+  margin-bottom: 50px;
+}
+
+#dna #sessao9 .wrapper-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#dna #sessao9 .wrapper-img::-webkit-scrollbar {
+  display: none;
+}
+
+#dna #sessao9 .wrapper-img img {
+  margin-right: 80px;
+  width: 960px;
+  float: left;
+}
+
+#dna #sessao9 .wrapper-img img:last-of-type {
+  margin-right: 0;
+}
+
+#dna footer a {
+  background-color: var(--secundaria);
 }
 
 /* :Pagina DNA Desktop */
@@ -2506,12 +2798,7 @@ header.logotipo {
 }
 
 #tomdevoz #sessao1 article .wrapper .dir {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  display: block !important;
 }
 
 #tomdevoz #sessao2 {
@@ -2866,6 +3153,38 @@ header.logotipo {
 }
 
 #download.azul article > a:before {
+  content: url("../img/download-blue.svg");
+  position: absolute;
+  right: 30px;
+}
+
+#download.azul-escuro {
+  background-color: var(--principal);
+  padding-top: 12px;
+}
+
+#download.azul-escuro .compartilhar .share {
+  border-color: #fff;
+}
+
+#download.azul-escuro .compartilhar .share:before {
+  content: url(../img/compartilhar-white.svg);
+}
+
+#download.azul-escuro .compartilhar .share p {
+  color: #fff;
+}
+
+#download.azul-escuro article p.txt--padrao40 {
+  color: #fff;
+}
+
+#download.azul-escuro article > a {
+  background-color: #fff;
+  color: var(--principal);
+}
+
+#download.azul-escuro article > a:before {
   content: url("../img/download-blue.svg");
   position: absolute;
   right: 30px;
