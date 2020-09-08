@@ -180,7 +180,7 @@
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="iconografia.html">Iconografia</a>
+                    <a class="link-abre " href="iconografia.html">Iconografia</a>
                     <li>
                         <a href="#sessao1">Construção</a>
                     </li>
@@ -189,36 +189,36 @@
                     </li>
                 </ul>
 
-                <!-- <ul>
-                    <a class="link-abre" href="javascript:function() { return false; }">Ilustração</a>
+                <ul>
+                    <a class="link-abre" href="ilustracao.html">Ilustração</a>
                     <li>
-                        <a href="#sessao1">Diretrtizes</a>
+                        <a href="#sessao1">Diretrizes</a>
                     </li>
                     <li>
-                        <a href="#sessao2">Cores</a>
+                        <a href="#sessao3">Cores</a>
                     </li>
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="javascript:function() { return false; }">Estilo Fotográfico</a>            
+                    <a class="link-abre" href="fotografia.html">Estilo Fotográfico</a>            
                 </ul>
         
                 <ul>
-                    <a class="link-abre" href="javascript:function() { return false; }">Exemplos de aplicações</a>            
+                    <a class="link-abre" href="aplicacoes.html">Exemplos de aplicações</a>            
                 </ul>
                 
                 <ul>
-                    <a class="link-abre" href="javascript:function() { return false; }">Ambientação</a>            
-                </ul> -->
+                    <a class="link-abre" href="ambientacao.html">Ambientação</a>            
+                </ul>
 
                 
                 <a class="tomdevoz" href="tomdevoz.html">Tom de Voz</a>
 
 
                 <div class="navfooter">
-                    <a href="">Central de downloads</a>
+                    <a href="downloads.html">Central de downloads</a>
 
-                    <a href="">Sair</a>
+                    <a href="index.html">Sair</a>
                 </div>
             </div>
     
@@ -412,7 +412,7 @@
             <section id="download" class="azul-escuro">
                 <article>
                     <p class="txt--padrao40 txt--bold">Download</p>
-                    <a href="">Rumo_OnePage.pdf</a>
+                    <a href="assets/download/dna/Rumo_OnePage.zip">Rumo_OnePage.zip</a>
                 </article>                
             </section>
 
@@ -435,7 +435,7 @@
            <section id="download">
                 <article>
                     <p class="txt--padrao40 txt--bold">Download</p>
-                    <a href="">Rumo_Manifesto.Zip</a>
+                    <a href="assets/download/dna/Rumo_Manifesto.zip">Rumo_Manifesto.Zip</a>
                 </article>                
             </section>
 
@@ -459,12 +459,26 @@
                     <p class="txt--padrao40 txt--bold">Inspiração</p>
                 </article>
 
+                
                 <div class="wrapper-img">
-                    <img src="assets/img/Rumo_DNA_Slider1.jpg" alt="">
-                    <img src="assets/img/Rumo_DNA_Slider2.jpg" alt="">
-                    <img src="assets/img/Rumo_DNA_Slider3.jpg" alt="">
-                    <img src="assets/img/Rumo_DNA_Slider4.jpg" alt="">
-                    <img src="assets/img/Rumo_DNA_Slider5.jpg" alt="">
+                    <ul id="scroller">
+                        <li>
+                            <img src="assets/img/Rumo_DNA_Slider1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/img/Rumo_DNA_Slider2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/img/Rumo_DNA_Slider3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/img/Rumo_DNA_Slider4.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="assets/img/Rumo_DNA_Slider5.jpg" alt="">
+                        </li>
+                    </ul>
+                    
                 </div>
             </section>
 
@@ -472,7 +486,7 @@
             <section id="download">
                 <article>
                     <p class="txt--padrao40 txt--bold">Download</p>
-                    <a href="">Rumo_Mini_Guia.Zip</a>
+                    <a href="assets/download/dna/Rumo_Mini_Guia.zip">Rumo_Mini_Guia.Zip</a>
                 </article>                
             </section>
 
@@ -499,6 +513,16 @@
     <script type="text/javascript" src="assets/js/estrutura.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/BeerSlider.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.simplyscroll.js"></script> 
+    
+    <script type="text/javascript">
+        (function($) {
+            $(function() { //on DOM ready 
+                $("#scroller").simplyScroll();
+            });
+         })(jQuery);
+    </script>
+    
     <script>        
         var slider = new BeerSlider( document.getElementById( "beer-slider" ), { start: 50 } );
     </script>

@@ -112,8 +112,17 @@ jQuery(document).ready(function() {
 						$('.blocotopo').removeClass('topobg');
 					}, 1200);
 
+				setTimeout(
+					function() 
+					{ 
+						$('html,body').animate({scrollTop: $('#sessao1').offset().top}, 500);
+						
+					}, 2500);
+
 			});
 		});
+
+
 
 	// Play Video Grid
 		// $(function() {
@@ -202,39 +211,39 @@ jQuery(document).ready(function() {
 
 
 	// Slider Inspiração
-		if ( document.getElementById('dna') ) {
+		// if ( document.getElementById('dna') ) {
 
-			const slider = document.querySelector('.wrapper-img');
-			let isDown = false;
-			let startX;
-			let scrollLeft;
+		// 	const slider = document.querySelector('.wrapper-img');
+		// 	let isDown = false;
+		// 	let startX;
+		// 	let scrollLeft;
 	
-			slider.addEventListener('mousedown', (e) => {
-				isDown = true;
-				slider.classList.add('active');
-				startX = e.pageX - slider.offsetLeft;
-				scrollLeft = slider.scrollLeft;
-			});
-			slider.addEventListener('mouseleave', () => {
-				isDown = false;
-				slider.classList.remove('active');
-			});
-			slider.addEventListener('mouseup', () => {
-				isDown = false;
-				slider.classList.remove('active');
-			});
-			slider.addEventListener('mousemove', (e) => {
-				if(!isDown) return;
-				e.preventDefault();
-				const x = e.pageX - slider.offsetLeft;
-				const walk = (x - startX) * 1.6; //scroll-fast
-				slider.scrollLeft = scrollLeft - walk;
-				// console.log(walk);
-			});
+		// 	slider.addEventListener('mousedown', (e) => {
+		// 		isDown = true;
+		// 		slider.classList.add('active');
+		// 		startX = e.pageX - slider.offsetLeft;
+		// 		scrollLeft = slider.scrollLeft;
+		// 	});
+		// 	slider.addEventListener('mouseleave', () => {
+		// 		isDown = false;
+		// 		slider.classList.remove('active');
+		// 	});
+		// 	slider.addEventListener('mouseup', () => {
+		// 		isDown = false;
+		// 		slider.classList.remove('active');
+		// 	});
+		// 	slider.addEventListener('mousemove', (e) => {
+		// 		if(!isDown) return;
+		// 		e.preventDefault();
+		// 		const x = e.pageX - slider.offsetLeft;
+		// 		const walk = (x - startX) * 1.6; //scroll-fast
+		// 		slider.scrollLeft = scrollLeft - walk;
+		// 		// console.log(walk);
+		// 	});
 			
-		}
+		// }
 	
-
+	
 
 
 
@@ -363,6 +372,55 @@ jQuery(document).ready(function() {
 			})
 
 		})
+
+
+	// Aplicacoes Slider
+		$('#aplicacoes .slick').slick({
+			dots: true,
+			arrows: true,
+			nextArrow: '<div class="slick-next"></div>',
+			prevArrow: '<div class="slick-prev"></div>',			
+			speed: 400,
+			infinite: false,
+			fade: true,
+			cssEase: 'linear',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: false,
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			adaptiveHeight: true
+		});
+
+		
+		$(document).ready(function(){
+			$('#aplicacoes .slick-prev').css('opacity','.5')
+		})		
+
+
+		$('.slick-prev').click(function(){
+			$('#aplicacoes .slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				if (nextSlide == '0') {
+					$('.slick-prev').css('opacity','.5');
+				} else {
+					$('.slick-prev').css('opacity','1');
+				}
+			});
+		})
+
+		$('.slick-next').click(function(){
+			$('.slick-prev').css('opacity','1');
+
+			$('#aplicacoes .slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){			
+
+				if (nextSlide != 0 && nextSlide != 1 && nextSlide != 2 && nextSlide != 3 && nextSlide != 4 && nextSlide != 5 ) {
+					$('.slick-next').css('opacity','.5');
+				} else {
+					$('.slick-next').css('opacity','1');
+				}
+			});
+		})
+
 
 	// Exercite o tom de voz Sessao5
 		$(document).ready( function() {
@@ -585,11 +643,22 @@ jQuery(document).ready(function() {
 		}
 
 
-		// Accordeon		
+	// Accordeon		
 		$('.wrapper-acc .box').click(function() {			
 			$(this).addClass('ativo');
 			$(this).siblings().removeClass('ativo');
 		})
+
+
+	// Definir cores de background dos blocos em Ilustracao
+		$('.bloco').each(function(index, element) {
+			
+			var str = element.innerText
+			var ultima = str.substring(str.lastIndexOf('#'))
+			ultima = ultima.replace(/\s/g, '');
+
+			$(this).css('background-color',ultima);
+		});
 		
 
 	// Funções executadas apenas na versão Desktop:
@@ -635,6 +704,20 @@ jQuery(document).ready(function() {
 				$('#sessao6 .nav_tabs .tab:eq('+nav+')').addClass('active')
 				$('#sessao6 .slider-bar').width(size + 20)
 				$('#sessao6 .slider-bar').css('margin-left',pos)	
+			})
+
+
+
+			$('#fotografia .nav_tabs .nav li').click(function () {				
+				var nav = $(this).attr('nav')
+				var size = $(this).width();
+				var pos = $(this).position().left		
+				$('#fotografia .nav_tabs .tab').removeClass('active')
+				$('#fotografia .nav_tabs .nav li').removeClass('active')
+				$(this).addClass('active')
+				$('#fotografia .nav_tabs .tab:eq('+nav+')').addClass('active')
+				$('#fotografia .slider-bar').width(size + 20)
+				$('#fotografia .slider-bar').css('margin-left',pos)	
 			})
 
 
@@ -694,7 +777,8 @@ jQuery(document).ready(function() {
 				$('#topo').css('z-index','0');
 			})
 
-						
+
+									
 			
 		}
 	// :Funções executadas apenas na versão Mobile

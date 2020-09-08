@@ -515,6 +515,10 @@ main {
                 max-width: 468px;
             }
 
+            p.txt--padrao40 {
+                max-width: 446px;
+            }
+
             .wrapper {
                 display: grid;
                 grid-template-columns: 50% 50%;
@@ -901,6 +905,7 @@ main {
                 flex-wrap: nowrap;
                 overflow-x: auto;
                 cursor: grab;
+                max-height: 540px;
 
                 &::-webkit-scrollbar {
                     display: none;
@@ -2652,6 +2657,409 @@ main {
 
 
 
+
+
+/* Pagina Ilustração Desktop: */
+    #ilustracao {
+        .topobg {
+            background-image: url('../img/Rumo_ilustracao_banner.png');
+            background-size: cover;
+        }
+
+        #sessao1 {
+            padding-top: 50px;
+
+            img {
+                width: 445px;
+                float: right;
+            }
+
+            .box {
+                margin-top: 70px;
+            }
+
+            .textos {
+                float: left;
+            }
+
+            p.txt--padrao12 {
+                line-height: 1.125rem;
+            }
+
+            p.txt--padrao20 {
+                margin-bottom: 26px;
+            }
+        }
+
+        #sessao2 {            
+            padding-bottom: 75px;
+
+            img {                
+                margin: 140px auto;
+                margin-bottom: 0;
+                width: 464.5px;
+
+            }
+        }
+
+        #sessao3 {
+            padding-top: 75px;
+
+            p.txt--padrao40 {
+                margin-bottom: 20px;
+            }
+
+            p.txt--padrao12 {
+                max-width: 352px;                
+            }
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin-top: 60px;
+            }
+
+            .box {
+                max-width: 266px;
+                font-family: 'cera_probold';
+                color: #fff;
+                font-size: 0.6875rem;                
+
+                .bloco-linha {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    &.destaque {
+                        grid-template-columns: 1fr;
+                        
+                        .bloco {
+                            height: 100px;                            
+                        }
+                    }
+                }
+
+                .bloco {
+                    width: 100%;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 11px;
+                    box-sizing: border-box;
+
+                    &.txt--black {
+                        color: #000;
+                    }
+                }                
+            }
+
+        }
+
+
+        #sessao4 {
+            padding: 150px 0;
+
+            .wrapper {
+                align-items: center;
+                margin-top: 80px;
+            }
+
+            img {
+                &:first-of-type {
+                    width: 379px;
+                }
+
+                &:last-of-type {
+                    width: 526px;
+                }
+            }
+        }
+
+    }
+
+/* :Pagina Ilustração Desktop */
+
+
+
+
+/* Pagina Fotografia Desktop: */
+    #fotografia {
+        .topobg {
+            background-image: url('../img/Rumo_EstiloFotografico_Banner.png');
+            background-size: cover;
+        }
+
+        #sessao1 {
+            padding-top: 60px;
+            padding-bottom: 90px;
+            background-color: var(--bgcinza);
+
+            p.txt--padrao20 {
+                margin-bottom: 40px;
+            }
+        }
+
+        .nav_tabs {
+            // margin-bottom: 73px;
+            max-width: 100%;
+
+            .nav {
+                display: inline-flex!important;
+                position: relative;
+                
+                .slider {
+                    width: 100%;
+                    height: 3px;
+                    position: absolute;
+                    bottom: 0;                    
+
+                    .slider-bar {
+                        
+                        height: 3px;
+                        background-color: var(--principal);
+                        display: block;                        
+                        bottom: 0;
+                        transition: all 500ms ease-in-out;
+                    }
+                }                
+                
+                li {
+                    padding: 15px 10px;
+                    display: block;
+                    font-weight: bold;
+                    cursor: pointer;
+                    font-size: 18px;
+                    position: relative;
+                    margin-right: 90px;
+
+                    &.active {
+                        
+                    }                    
+                }
+                
+                
+            }
+
+            > .content {
+                background-color: var(--bgcinza);
+                border-top: 1px solid #7F9BB1;                
+            }
+
+            .content {
+
+                .tab {
+                    display: none;
+                    width: 100%;
+                    padding-top: 35px;
+                    opacity: 0;                                     
+
+                    &.active {
+                        display: block;
+                        opacity: 1;
+                        animation: fade 0.8s linear;                    
+                    }
+
+                    img {
+                        width: 1017px;
+                        margin-top: 50px;
+                    }
+                    
+                }
+
+                
+
+                p {
+                    // font-style: italic;
+                    font-size: 0.75rem;
+                    line-height: 1.3125rem;
+                    max-width: 676px;
+                }
+
+                
+
+            }
+        }
+
+        .ideia {
+            &:hover {
+                .destaque-ideia {
+                    width: 690px;
+                }
+            }
+        }
+    }
+
+/* :Pagina Fotografia Desktop */
+
+
+
+
+/* Pagina Aplicações Desktop: */
+    #aplicacoes {
+        .topobg {
+            background-image: url('../img/Rumo_Aplicacoes_banner.png');
+            background-size: cover;
+        }
+
+        #download {
+            a:not(.share) {
+                height: 46px;
+                width: 84px;
+                background-color: #fff;
+                border: 1px solid var(--principal);
+                color: var(--principal);
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                font-size: 1rem;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        #sessao1 {
+            padding: 100px 0;
+
+            article {
+                position: relative;
+                margin: auto;
+                padding: 0 35px;
+            }
+
+            .wrapper {
+
+                &.slick {
+                    position: relative;
+                    
+                    .slick-arrow {
+                        position: absolute;
+                        height: 100%;
+                        width: 80px;                        
+                        top: 0;
+                        bottom: 0;
+                        z-index: 1;
+                        cursor: pointer;
+                        display: block;
+                    }
+    
+                    .slick-prev {
+                        width: 80px;
+                        height: 100%;
+                        background-color: #ffffff54;
+                        background-image: url('../img/voltar.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        left: 0;                        
+                    }
+    
+                    .slick-next {
+                        width: 80px;
+                        height: 100%;
+                        background-color: #ffffff54;
+                        background-image: url('../img/avancar.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+
+                .slick-dots {
+                    position: absolute;
+                    width: 1050px;
+                    left: 0;
+                    right: 0;
+                    display: flex!important;
+                    justify-content: center;
+
+                    li {
+                        float: left;                        
+
+                        button {
+                            font-size: 0;
+                            border-radius: 0;
+                            border:0;
+                            width: 20px;
+                            height: 10px;
+                            margin-right: 8px;
+                            cursor: pointer;
+                            background-color: #B2C3D0;
+                        }
+
+                        &.slick-active {
+
+                            button {
+                                background-color: var(--principal);  
+                            }
+                        }
+                    }
+                }
+
+            }
+            
+            
+            
+        }
+    }
+/* :Pagina Aplicações Desktop */
+
+
+
+
+/* Pagina Ambientação Desktop: */
+    #ambientacao {
+        .topobg {
+            background-image: url('../img/Rumo_Ambientacao_Banner.jpg');
+            background-size: cover;
+        }
+
+        #sessao1 {
+            padding: 70px 0;
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 35% 65%;
+    
+                .textos {
+                    margin-right: 100px;
+    
+                    p.txt--padrao40 {
+                        margin-bottom: 40px;
+                    }
+                }
+    
+                img {
+                    margin-top: 30px;
+                    width: 683.5px;
+                }
+            }
+        }
+
+        #sessao2 {
+            img {
+                width: 1098px;
+            }
+
+            p {
+                margin: 12px 0 60px 20px;
+            }
+        }
+
+        #sessao3 {
+            img {
+                // width: 960px;
+            }
+        }
+
+    }
+/* :Pagina Ambientação Desktop */
+
+
+
+
+
 /* Pagina Tom de Voz Desktop: */
 
     #tomdevoz {
@@ -3056,6 +3464,64 @@ main {
 
 
 
+/* Pagina Downloads Desktop: */
+    #downloadspage {
+        padding-top: 100px;
+        padding-bottom: 120px;
+
+        .box {
+            clear: both; 
+            margin-top: 50px;            
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+            
+            .links {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: 775px;
+            }
+
+            a {
+                width: 253px;
+                max-width: 100%;
+                height: 87px;
+                background-color: var(--principal);
+                color: #fff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding-left: 34px;
+                position: relative;
+                font-size: 0.875rem;
+                float: left;
+                margin-right: 20px;
+                margin-top: 20px;
+                box-sizing: border-box;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+    
+                &:before {
+                    content: url(../img/download.svg);
+                    position: absolute;
+                    right: 19px;
+                }
+            }
+
+        }
+        
+    }
+/* :Pagina Downloads Desktop */
+
+
+
+
 
 /* Pagina Download Desktop: */
     #download {
@@ -3211,6 +3677,8 @@ main {
         }
     }
 /* :Pagina Download Desktop */
+
+
 
 
 /* Footer Desktop: */
@@ -3705,7 +4173,22 @@ main {
             .wrapper-img {
                 img {
                     max-width: initial;
+                    width: initial;
                     max-height: 360px;
+                    margin-right: 45px;
+                }
+
+                .simply-scroll {                    
+                    height: 360px;
+                }
+
+                .simply-scroll-clip {
+                    height: 360px;
+                }
+
+                .simply-scroll-list li {
+                    width: auto;
+                    height: 360px;
                     margin-right: 45px;
                 }
             }
@@ -3713,7 +4196,6 @@ main {
 
     }
 /* :Pagina DNA Mobile */
-
 
 
 
@@ -4285,6 +4767,8 @@ main {
 /* :Pagina Tipografia Mobile */
 
 
+
+
 /* Pagina Grid Mobile: */
     #grid {
 
@@ -4358,6 +4842,8 @@ main {
     }
 
 /* :Pagina Grid Mobile */
+
+
 
 
 /* Pagina Grafismos Mobile: */
@@ -4635,6 +5121,9 @@ main {
 /* :Pagina Grafismos Mobile */
 
 
+
+
+
 /* Pagina Iconografia Mobile: */
 
     #iconografia {
@@ -4700,6 +5189,189 @@ main {
     }
 
 /* :Pagina Iconografia Mobile */
+
+
+
+
+
+/* Pagina Ilustração Mobile: */
+    #ilustracao {
+        #sessao1 {
+            padding: 0;
+
+            .wrapper {
+                .textos {
+                    p.txt--padrao12 {
+                        line-height: 1.625rem;
+                    }
+                }
+            }
+
+            img {                
+                max-width: initial;
+                width: calc( 100% + 70px);
+                margin-left: -35px;
+                margin-right: -35px;                
+            }
+        }
+
+        #sessao2 {
+            padding-bottom: 0;
+            img {
+                margin-top: 86px;
+            }
+        }
+
+        #sessao3 {
+            padding-top: 110px;
+
+            .wrapper {
+                grid-template-columns: initial;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                margin-top: 30px;
+
+                &:last-of-type {
+                    margin-top: 50px;
+                }
+            }
+        }
+
+        #sessao4 {
+            padding-top: 110px;
+            padding-bottom: 80px;
+
+            .wrapper {
+                margin-top: 35px;
+
+                .central {
+                    &:first-of-type {
+                        margin-bottom: 85px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            .nomelink {
+                p {
+                    text-align: right;
+
+                    &:last-of-type {
+                        font-size: 1.625rem;
+                    }
+                }
+            }
+        }
+    }
+
+/* :Pagina Ilustração Mobile */
+
+
+
+
+
+/* Pagina Fotografia Mobile: */
+    #fotografia {
+        h1 {
+            max-width: 246px;
+        }
+
+       .nav_tabs {
+
+            .titulo {
+                &.mobileitem {
+                    display: inline-block!important;
+                    border-bottom: 3px solid var(--principal);
+                    padding-bottom: 10px;
+                }
+            }
+
+            hr {
+                margin: 0;
+            }
+           
+            .nav {
+               &.desktopitem {
+                   display: none!important;
+               }
+               
+           }
+
+           .content {
+                .tab {
+                   display: block;
+                   opacity: 1;
+                   padding-top: 30px;
+
+                   img {
+                       margin-bottom: 30px;
+                   }
+               }
+           }
+
+           > .content {
+               border-top: none;
+
+               p {
+                   font-size: 1rem;
+                   line-height: 1.625rem;
+               }
+           }
+       }
+
+       .destaque-ideia {
+            height: 150px;
+
+            &:before {
+                display: flex;
+                align-items: center;
+                height: 150px;
+            }
+       }
+        
+
+    }
+/* :Pagina Fotografia Mobile */
+
+
+
+
+
+/* Pagina Aplicacoes Mobile: */
+    #aplicacoes {
+        .wrapper {
+            .slick-arrow {
+                display: none!important;
+            }
+
+            .slick-dots {
+                width: 100%!important;
+            }
+        }
+    }
+/* :Pagina Aplicacoes Mobile */
+
+
+
+
+
+
+/* Pagina Ambientação Mobile: */
+    #ambientacao {
+        #sessao1 {
+            .wrapper {
+                display: block;
+
+                .textos {
+                    margin-right: 0;
+                }
+            }
+        }
+        
+    }
+/* :Pagina Ambientação Mobile */
+
+
 
 
 
@@ -4886,6 +5558,28 @@ main {
 /* :Pagina Tom de Voz Mobile */
 
 
+
+
+
+/* Pagina Downloads Mobile: */
+    #downloadspage {
+        .box {
+            display: inline-block;
+            max-width: 100%;
+
+            .links {
+                display: block;
+            }
+
+        }
+    }
+/* :Pagina Downloads Mobile */
+
+
+
+
+
+
 /* Pagina Download Mobile: */
     #download {
 
@@ -4904,6 +5598,10 @@ main {
         }
     }
 /* :Pagina Download Mobile */
+
+
+
+
 
 
 /* Footer Mobile: */
@@ -4929,9 +5627,13 @@ main {
             justify-content: center;
         }
     }
-/* :Footer Mobile */
-
+    
+    /* :Footer Mobile */
+    
 }
+
+
+
 
 
 /* Beer Slider: */
@@ -4973,7 +5675,215 @@ main {
 
 
 
+.simply-scroll { /* Customisable base class for style override DIV */
+	width: 100%;
+	height: 540px;
+	margin-bottom: 1em;
+}
+
+	.simply-scroll .simply-scroll-clip {
+		width: 100%;
+		height: 540px;
+	}
+	
+		.simply-scroll .simply-scroll-list {}
+		
+		.simply-scroll .simply-scroll-list li {
+			float: left;
+			width: 960px;
+			height: 540px;
+		}
+    
 
 
+
+/* Simply Slider: */
+.simply-scroll-container { /* Container DIV - automatically generated */
+	position: relative;
+}
+
+	.simply-scroll-clip { /* Clip DIV - automatically generated */
+		position: relative;
+		overflow: hidden;
+	}
+
+	.simply-scroll-list { /* UL/OL/DIV - the element that simplyScroll is inited on */
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+		.simply-scroll-list li {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+	
+		.simply-scroll-list li img {
+			border: none;
+			display: block;
+		}
+	
+	.simply-scroll-btn {
+		position: absolute;
+		background-image: url(buttons.png);
+		width: 42px;
+		height: 44px;
+		z-index:3;
+		cursor: pointer;
+	}
+	
+	.simply-scroll-btn-left {
+		left: 6px;
+		bottom: 6px;
+		background-position: 0 -44px;
+	}
+	.simply-scroll-btn-left.disabled {
+		background-position: 0 0 !important;
+	}
+	.simply-scroll-btn-left:hover, .simply-scroll-btn-left:focus {
+		background-position: 0 -88px;
+	}
+	
+	.simply-scroll-btn-right {
+		right: 6px;
+		bottom: 6px;
+		background-position: -84px -44px;
+	}
+	.simply-scroll-btn-right.disabled {
+		background-position: -84px 0 !important;
+	}
+	.simply-scroll-btn-right:hover, .simply-scroll-btn-right:focus {
+		background-position: -84px -88px;
+	}
+	
+	.simply-scroll-btn-up {
+		right: 6px;
+		top: 6px;
+		background-position: -126px -44px;
+	}
+	.simply-scroll-btn-up.disabled {
+		background-position: -126px 0 !important;
+	}
+	.simply-scroll-btn-up:hover, .simply-scroll-btn-up:focus {
+		background-position: -126px -88px;
+	}
+	
+	.simply-scroll-btn-down {
+		right: 6px;
+		bottom: 6px;
+		background-position: -42px -44px;
+	}
+	.simply-scroll-btn-down.disabled {
+		background-position: -42px 0 !important;
+	}
+	.simply-scroll-btn-down:hover, .simply-scroll-btn-down:focus {
+		background-position: -42px -88px;
+	}
+	
+	.simply-scroll-btn-pause {
+		right: 6px;
+		bottom: 6px;
+		background-position: -168px -44px;
+	}
+	.simply-scroll-btn-pause:hover, .simply-scroll-btn-pause:focus {
+		background-position: -168px -88px;
+	}
+	
+	.simply-scroll-btn-pause.active {
+		background-position: -84px -44px;
+	}
+	.simply-scroll-btn-pause.active:hover, .simply-scroll-btn-pause.active:focus {
+		background-position: -84px -88px;
+	}
+
+/* Custom class modifications - override classees
+
+.simply-scroll is default
+
+*/
+
+.simply-scroll { /* Customisable base class for style override DIV */
+	width: 100%;
+	height: 540px;
+	margin-bottom: 1em;
+}
+
+	.simply-scroll .simply-scroll-clip {
+		width: 100%;
+		height: 540px;
+	}
+	
+		.simply-scroll .simply-scroll-list {}
+		
+		.simply-scroll .simply-scroll-list li {
+			float: left;
+			width: 960px;
+            height: 540px;
+            margin-right: 80px;
+		}
+		.simply-scroll .simply-scroll-list li img {}
+	
+	.simply-scroll .simply-scroll-btn {}
+	
+	.simply-scroll .simply-scroll-btn-left {}
+	.simply-scroll .simply-scroll-btn-left.disabled {}
+	.simply-scroll .simply-scroll-btn-left:hover {}
+	
+	.simply-scroll .simply-scroll-btn-right {}
+	.simply-scroll .simply-scroll-btn-right.disabled {}
+	.simply-scroll .simply-scroll-btn-right:hover {}
+	
+	.simply-scroll .simply-scroll-btn-up {}
+	.simply-scroll .simply-scroll-btn-up.disabled {}
+	.simply-scroll .simply-scroll-btn-up:hover {}
+	
+	.simply-scroll .simply-scroll-btn-down {}
+	.simply-scroll .simply-scroll-btn-down.disabled {}
+	.simply-scroll .simply-scroll-btn-down:hover {}
+	
+
+
+/* Vertical scroller example */
+
+.vert { /* wider than clip to position buttons to side */
+	width: 340px;
+	height: 400px;
+	margin-bottom: 1.5em;
+}
+
+	.vert .simply-scroll-clip {
+		width: 290px;
+		height: 400px;
+	}
+	
+		.vert .simply-scroll-list {}
+		
+		.vert .simply-scroll-list li {
+			width: 290px;
+			height: 200px;
+		}
+		.vert .simply-scroll-list li img {}
+	
+	.vert .simply-scroll-btn {}
+
+	.vert .simply-scroll-btn-up { /* modified btn pos */
+		right: 0;
+		top: 0;
+	}
+	.vert .simply-scroll-btn-up.disabled {}
+	.vert .simply-scroll-btn-up:hover {}
+	
+	.vert .simply-scroll-btn-down { /* modified btn pos */
+		right: 0;
+		top: 52px;
+	}
+	.vert .simply-scroll-btn-down.disabled {}
+	.vert .simply-scroll-btn-down:hover {}
+	
+	/* NOTE left-right classes wouldn't be needed on vertical scroller */
+
+/* :Simply Slider */
 
 

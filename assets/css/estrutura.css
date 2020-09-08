@@ -59,7 +59,7 @@ body {
   height: 100%;
   min-height: 100% !important;
   overflow-x: hidden !important;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -727,6 +727,10 @@ header.topobg {
   max-width: 468px;
 }
 
+#dna #sessao1 p.txt--padrao40 {
+  max-width: 446px;
+}
+
 #dna #sessao1 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -1158,6 +1162,7 @@ header.topobg {
   overflow-x: auto;
   cursor: -webkit-grab;
   cursor: grab;
+  max-height: 540px;
 }
 
 #dna #sessao9 .wrapper-img::-webkit-scrollbar {
@@ -2769,6 +2774,361 @@ header.logotipo {
 }
 
 /* :Pagina Iconografia Desktop */
+/* Pagina Ilustração Desktop: */
+#ilustracao .topobg {
+  background-image: url("../img/Rumo_ilustracao_banner.png");
+  background-size: cover;
+}
+
+#ilustracao #sessao1 {
+  padding-top: 50px;
+}
+
+#ilustracao #sessao1 img {
+  width: 445px;
+  float: right;
+}
+
+#ilustracao #sessao1 .box {
+  margin-top: 70px;
+}
+
+#ilustracao #sessao1 .textos {
+  float: left;
+}
+
+#ilustracao #sessao1 p.txt--padrao12 {
+  line-height: 1.125rem;
+}
+
+#ilustracao #sessao1 p.txt--padrao20 {
+  margin-bottom: 26px;
+}
+
+#ilustracao #sessao2 {
+  padding-bottom: 75px;
+}
+
+#ilustracao #sessao2 img {
+  margin: 140px auto;
+  margin-bottom: 0;
+  width: 464.5px;
+}
+
+#ilustracao #sessao3 {
+  padding-top: 75px;
+}
+
+#ilustracao #sessao3 p.txt--padrao40 {
+  margin-bottom: 20px;
+}
+
+#ilustracao #sessao3 p.txt--padrao12 {
+  max-width: 352px;
+}
+
+#ilustracao #sessao3 .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 60px;
+}
+
+#ilustracao #sessao3 .box {
+  max-width: 266px;
+  font-family: 'cera_probold';
+  color: #fff;
+  font-size: 0.6875rem;
+}
+
+#ilustracao #sessao3 .box .bloco-linha {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#ilustracao #sessao3 .box .bloco-linha.destaque {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+#ilustracao #sessao3 .box .bloco-linha.destaque .bloco {
+  height: 100px;
+}
+
+#ilustracao #sessao3 .box .bloco {
+  width: 100%;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#ilustracao #sessao3 .box .bloco.txt--black {
+  color: #000;
+}
+
+#ilustracao #sessao4 {
+  padding: 150px 0;
+}
+
+#ilustracao #sessao4 .wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+}
+
+#ilustracao #sessao4 img:first-of-type {
+  width: 379px;
+}
+
+#ilustracao #sessao4 img:last-of-type {
+  width: 526px;
+}
+
+/* :Pagina Ilustração Desktop */
+/* Pagina Fotografia Desktop: */
+#fotografia .topobg {
+  background-image: url("../img/Rumo_EstiloFotografico_Banner.png");
+  background-size: cover;
+}
+
+#fotografia #sessao1 {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  background-color: var(--bgcinza);
+}
+
+#fotografia #sessao1 p.txt--padrao20 {
+  margin-bottom: 40px;
+}
+
+#fotografia .nav_tabs {
+  max-width: 100%;
+}
+
+#fotografia .nav_tabs .nav {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  position: relative;
+}
+
+#fotografia .nav_tabs .nav .slider {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+}
+
+#fotografia .nav_tabs .nav .slider .slider-bar {
+  height: 3px;
+  background-color: var(--principal);
+  display: block;
+  bottom: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+#fotografia .nav_tabs .nav li {
+  padding: 15px 10px;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  margin-right: 90px;
+}
+
+#fotografia .nav_tabs > .content {
+  background-color: var(--bgcinza);
+  border-top: 1px solid #7F9BB1;
+}
+
+#fotografia .nav_tabs .content .tab {
+  display: none;
+  width: 100%;
+  padding-top: 35px;
+  opacity: 0;
+}
+
+#fotografia .nav_tabs .content .tab.active {
+  display: block;
+  opacity: 1;
+  -webkit-animation: fade 0.8s linear;
+          animation: fade 0.8s linear;
+}
+
+#fotografia .nav_tabs .content .tab img {
+  width: 1017px;
+  margin-top: 50px;
+}
+
+#fotografia .nav_tabs .content p {
+  font-size: 0.75rem;
+  line-height: 1.3125rem;
+  max-width: 676px;
+}
+
+#fotografia .ideia:hover .destaque-ideia {
+  width: 690px;
+}
+
+/* :Pagina Fotografia Desktop */
+/* Pagina Aplicações Desktop: */
+#aplicacoes .topobg {
+  background-image: url("../img/Rumo_Aplicacoes_banner.png");
+  background-size: cover;
+}
+
+#aplicacoes #download a:not(.share) {
+  height: 46px;
+  width: 84px;
+  background-color: #fff;
+  border: 1px solid var(--principal);
+  color: var(--principal);
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1rem;
+}
+
+#aplicacoes #download a:not(.share):before {
+  display: none;
+}
+
+#aplicacoes #sessao1 {
+  padding: 100px 0;
+}
+
+#aplicacoes #sessao1 article {
+  position: relative;
+  margin: auto;
+  padding: 0 35px;
+}
+
+#aplicacoes #sessao1 .wrapper.slick {
+  position: relative;
+}
+
+#aplicacoes #sessao1 .wrapper.slick .slick-arrow {
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+}
+
+#aplicacoes #sessao1 .wrapper.slick .slick-prev {
+  width: 80px;
+  height: 100%;
+  background-color: #ffffff54;
+  background-image: url("../img/voltar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+}
+
+#aplicacoes #sessao1 .wrapper.slick .slick-next {
+  width: 80px;
+  height: 100%;
+  background-color: #ffffff54;
+  background-image: url("../img/avancar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  right: 0;
+}
+
+#aplicacoes #sessao1 .wrapper .slick-dots {
+  position: absolute;
+  width: 1050px;
+  left: 0;
+  right: 0;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#aplicacoes #sessao1 .wrapper .slick-dots li {
+  float: left;
+}
+
+#aplicacoes #sessao1 .wrapper .slick-dots li button {
+  font-size: 0;
+  border-radius: 0;
+  border: 0;
+  width: 20px;
+  height: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  background-color: #B2C3D0;
+}
+
+#aplicacoes #sessao1 .wrapper .slick-dots li.slick-active button {
+  background-color: var(--principal);
+}
+
+/* :Pagina Aplicações Desktop */
+/* Pagina Ambientação Desktop: */
+#ambientacao .topobg {
+  background-image: url("../img/Rumo_Ambientacao_Banner.jpg");
+  background-size: cover;
+}
+
+#ambientacao #sessao1 {
+  padding: 70px 0;
+}
+
+#ambientacao #sessao1 .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+}
+
+#ambientacao #sessao1 .wrapper .textos {
+  margin-right: 100px;
+}
+
+#ambientacao #sessao1 .wrapper .textos p.txt--padrao40 {
+  margin-bottom: 40px;
+}
+
+#ambientacao #sessao1 .wrapper img {
+  margin-top: 30px;
+  width: 683.5px;
+}
+
+#ambientacao #sessao2 img {
+  width: 1098px;
+}
+
+#ambientacao #sessao2 p {
+  margin: 12px 0 60px 20px;
+}
+
+/* :Pagina Ambientação Desktop */
 /* Pagina Tom de Voz Desktop: */
 #tomdevoz .topobg {
   background-color: var(--verde1);
@@ -3121,6 +3481,62 @@ header.logotipo {
 }
 
 /* :Pagina Tom de Voz Desktop */
+/* Pagina Downloads Desktop: */
+#downloadspage {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+#downloadspage .box {
+  clear: both;
+  margin-top: 50px;
+}
+
+#downloadspage .box:first-of-type {
+  margin-top: 0;
+}
+
+#downloadspage .box .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  max-width: 775px;
+}
+
+#downloadspage .box a {
+  width: 253px;
+  max-width: 100%;
+  height: 87px;
+  background-color: var(--principal);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 34px;
+  position: relative;
+  font-size: 0.875rem;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#downloadspage .box a:last-of-type {
+  margin-right: 0;
+}
+
+#downloadspage .box a:before {
+  content: url(../img/download.svg);
+  position: absolute;
+  right: 19px;
+}
+
+/* :Pagina Downloads Desktop */
 /* Pagina Download Desktop: */
 #download.verde {
   background-color: var(--verde2);
@@ -3669,7 +4085,19 @@ footer .trademark p {
   }
   #dna #sessao9 .wrapper-img img {
     max-width: initial;
+    width: initial;
     max-height: 360px;
+    margin-right: 45px;
+  }
+  #dna #sessao9 .wrapper-img .simply-scroll {
+    height: 360px;
+  }
+  #dna #sessao9 .wrapper-img .simply-scroll-clip {
+    height: 360px;
+  }
+  #dna #sessao9 .wrapper-img .simply-scroll-list li {
+    width: auto;
+    height: 360px;
     margin-right: 45px;
   }
   /* :Pagina DNA Mobile */
@@ -4333,6 +4761,114 @@ footer .trademark p {
     max-width: 900px;
   }
   /* :Pagina Iconografia Mobile */
+  /* Pagina Ilustração Mobile: */
+  #ilustracao #sessao1 {
+    padding: 0;
+  }
+  #ilustracao #sessao1 .wrapper .textos p.txt--padrao12 {
+    line-height: 1.625rem;
+  }
+  #ilustracao #sessao1 img {
+    max-width: initial;
+    width: calc( 100% + 70px);
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+  #ilustracao #sessao2 {
+    padding-bottom: 0;
+  }
+  #ilustracao #sessao2 img {
+    margin-top: 86px;
+  }
+  #ilustracao #sessao3 {
+    padding-top: 110px;
+  }
+  #ilustracao #sessao3 .wrapper {
+    -ms-grid-columns: initial;
+        grid-template-columns: initial;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+  }
+  #ilustracao #sessao3 .wrapper:last-of-type {
+    margin-top: 50px;
+  }
+  #ilustracao #sessao4 {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
+  #ilustracao #sessao4 .wrapper {
+    margin-top: 35px;
+  }
+  #ilustracao #sessao4 .wrapper .central:first-of-type {
+    margin-bottom: 85px;
+  }
+  #ilustracao footer .nomelink p {
+    text-align: right;
+  }
+  #ilustracao footer .nomelink p:last-of-type {
+    font-size: 1.625rem;
+  }
+  /* :Pagina Ilustração Mobile */
+  /* Pagina Fotografia Mobile: */
+  #fotografia h1 {
+    max-width: 246px;
+  }
+  #fotografia .nav_tabs .titulo.mobileitem {
+    display: inline-block !important;
+    border-bottom: 3px solid var(--principal);
+    padding-bottom: 10px;
+  }
+  #fotografia .nav_tabs hr {
+    margin: 0;
+  }
+  #fotografia .nav_tabs .nav.desktopitem {
+    display: none !important;
+  }
+  #fotografia .nav_tabs .content .tab {
+    display: block;
+    opacity: 1;
+    padding-top: 30px;
+  }
+  #fotografia .nav_tabs .content .tab img {
+    margin-bottom: 30px;
+  }
+  #fotografia .nav_tabs > .content {
+    border-top: none;
+  }
+  #fotografia .nav_tabs > .content p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  #fotografia .destaque-ideia {
+    height: 150px;
+  }
+  #fotografia .destaque-ideia:before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 150px;
+  }
+  /* :Pagina Fotografia Mobile */
+  /* Pagina Aplicacoes Mobile: */
+  #aplicacoes .wrapper .slick-arrow {
+    display: none !important;
+  }
+  #aplicacoes .wrapper .slick-dots {
+    width: 100% !important;
+  }
+  /* :Pagina Aplicacoes Mobile */
+  /* Pagina Ambientação Mobile: */
+  #ambientacao #sessao1 .wrapper {
+    display: block;
+  }
+  #ambientacao #sessao1 .wrapper .textos {
+    margin-right: 0;
+  }
+  /* :Pagina Ambientação Mobile */
   /* Pagina Tom de Voz Mobile: */
   #tomdevoz .topobg {
     background-size: cover;
@@ -4469,6 +5005,15 @@ footer .trademark p {
     padding-top: 88px;
   }
   /* :Pagina Tom de Voz Mobile */
+  /* Pagina Downloads Mobile: */
+  #downloadspage .box {
+    display: inline-block;
+    max-width: 100%;
+  }
+  #downloadspage .box .links {
+    display: block;
+  }
+  /* :Pagina Downloads Mobile */
   /* Pagina Download Mobile: */
   #download p.txt--padrao40 {
     margin-bottom: 40px;
@@ -4542,4 +5087,192 @@ footer .trademark p {
 }
 
 /* :Beer Slider */
+.simply-scroll {
+  /* Customisable base class for style override DIV */
+  width: 100%;
+  height: 540px;
+  margin-bottom: 1em;
+}
+
+.simply-scroll .simply-scroll-clip {
+  width: 100%;
+  height: 540px;
+}
+
+.simply-scroll .simply-scroll-list li {
+  float: left;
+  width: 960px;
+  height: 540px;
+}
+
+/* Simply Slider: */
+.simply-scroll-container {
+  /* Container DIV - automatically generated */
+  position: relative;
+}
+
+.simply-scroll-clip {
+  /* Clip DIV - automatically generated */
+  position: relative;
+  overflow: hidden;
+}
+
+.simply-scroll-list {
+  /* UL/OL/DIV - the element that simplyScroll is inited on */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.simply-scroll-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.simply-scroll-list li img {
+  border: none;
+  display: block;
+}
+
+.simply-scroll-btn {
+  position: absolute;
+  background-image: url(buttons.png);
+  width: 42px;
+  height: 44px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.simply-scroll-btn-left {
+  left: 6px;
+  bottom: 6px;
+  background-position: 0 -44px;
+}
+
+.simply-scroll-btn-left.disabled {
+  background-position: 0 0 !important;
+}
+
+.simply-scroll-btn-left:hover, .simply-scroll-btn-left:focus {
+  background-position: 0 -88px;
+}
+
+.simply-scroll-btn-right {
+  right: 6px;
+  bottom: 6px;
+  background-position: -84px -44px;
+}
+
+.simply-scroll-btn-right.disabled {
+  background-position: -84px 0 !important;
+}
+
+.simply-scroll-btn-right:hover, .simply-scroll-btn-right:focus {
+  background-position: -84px -88px;
+}
+
+.simply-scroll-btn-up {
+  right: 6px;
+  top: 6px;
+  background-position: -126px -44px;
+}
+
+.simply-scroll-btn-up.disabled {
+  background-position: -126px 0 !important;
+}
+
+.simply-scroll-btn-up:hover, .simply-scroll-btn-up:focus {
+  background-position: -126px -88px;
+}
+
+.simply-scroll-btn-down {
+  right: 6px;
+  bottom: 6px;
+  background-position: -42px -44px;
+}
+
+.simply-scroll-btn-down.disabled {
+  background-position: -42px 0 !important;
+}
+
+.simply-scroll-btn-down:hover, .simply-scroll-btn-down:focus {
+  background-position: -42px -88px;
+}
+
+.simply-scroll-btn-pause {
+  right: 6px;
+  bottom: 6px;
+  background-position: -168px -44px;
+}
+
+.simply-scroll-btn-pause:hover, .simply-scroll-btn-pause:focus {
+  background-position: -168px -88px;
+}
+
+.simply-scroll-btn-pause.active {
+  background-position: -84px -44px;
+}
+
+.simply-scroll-btn-pause.active:hover, .simply-scroll-btn-pause.active:focus {
+  background-position: -84px -88px;
+}
+
+/* Custom class modifications - override classees
+
+.simply-scroll is default
+
+*/
+.simply-scroll {
+  /* Customisable base class for style override DIV */
+  width: 100%;
+  height: 540px;
+  margin-bottom: 1em;
+}
+
+.simply-scroll .simply-scroll-clip {
+  width: 100%;
+  height: 540px;
+}
+
+.simply-scroll .simply-scroll-list li {
+  float: left;
+  width: 960px;
+  height: 540px;
+  margin-right: 80px;
+}
+
+/* Vertical scroller example */
+.vert {
+  /* wider than clip to position buttons to side */
+  width: 340px;
+  height: 400px;
+  margin-bottom: 1.5em;
+}
+
+.vert .simply-scroll-clip {
+  width: 290px;
+  height: 400px;
+}
+
+.vert .simply-scroll-list li {
+  width: 290px;
+  height: 200px;
+}
+
+.vert .simply-scroll-btn-up {
+  /* modified btn pos */
+  right: 0;
+  top: 0;
+}
+
+.vert .simply-scroll-btn-down {
+  /* modified btn pos */
+  right: 0;
+  top: 52px;
+}
+
+/* NOTE left-right classes wouldn't be needed on vertical scroller */
+/* :Simply Slider */
 /*# sourceMappingURL=estrutura.css.map */
